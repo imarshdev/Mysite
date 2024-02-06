@@ -526,8 +526,8 @@ export function Menu() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1.5em"
-      height="1.5em"
+      width="1em"
+      height="1em"
       viewBox="0 0 24 24"
     >
       <g
@@ -573,8 +573,8 @@ export function Close() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1.5em"
-      height="1.5em"
+      width="1em"
+      height="1em"
       viewBox="0 0 24 24"
     >
       <path
