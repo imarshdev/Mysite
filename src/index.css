@@ -57,7 +57,7 @@ h3 {
   font-family: assasin;
   cursor: pointer;
 }
-p{
+p, h4{
   font-family: assasin;
 }
 
@@ -108,7 +108,7 @@ span {
   margin: 10px;
   transition: 0.3s;
   padding: 15px;
-  font-family: cavier;
+  font-family: assasin;
 }
 span:hover {
   border-color: blue;

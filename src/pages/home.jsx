@@ -76,7 +76,7 @@ function Home() {
               }}
             >
               <em style={{ fontSize: "20px" }}>About</em>
-              <p style={{ fontFamily: "sans-serif", fontSize: "16px" }}>
+              <p style={{ fontSize: "16px" }}>
                 A brief overview of my background, skills, and experience as a
                 front-end developer.
               </p>
