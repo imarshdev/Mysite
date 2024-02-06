@@ -57,6 +57,9 @@ h3 {
   font-family: assasin;
   cursor: pointer;
 }
+p{
+  font-family: assasin;
+}
 
 h1:hover {
   color: pink;

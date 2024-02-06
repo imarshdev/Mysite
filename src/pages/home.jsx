@@ -96,7 +96,7 @@ function Home() {
               }}
             >
               <em style={{ fontSize: "20px" }}>Projects</em>
-              <p style={{ fontFamily: "sans-serif", fontSize: "16px" }}>
+              <p style={{ fontSize: "16px" }}>
                 Showcasing a selection of my best projects with descriptions,
                 screenshots, and links to live demos or GitHub repositories.
               </p>
@@ -116,7 +116,7 @@ function Home() {
               }}
             >
               <em style={{ fontSize: "20px" }}>Blog</em>
-              <p style={{ fontFamily: "sans-serif", fontSize: "16px" }}>
+              <p style={{ fontSize: "16px" }}>
                 I have written blog posts, articles and notes including PDF
                 books related to front-end development, This is a section
                 highlighting them.
@@ -137,7 +137,7 @@ function Home() {
               }}
             >
               <em style={{ fontSize: "20px" }}>Contact</em>
-              <p style={{ fontFamily: "sans-serif", fontSize: "16px" }}>
+              <p style={{ fontSize: "16px" }}>
                 Providing my contact details, such as email or social media
                 handles, for potential clients or collaborators to get in touch.
               </p>
@@ -157,7 +157,7 @@ function Home() {
               }}
             >
               <em style={{ fontSize: "20px" }}>Play</em>
-              <p style={{ fontFamily: "sans-serif", fontSize: "16px" }}>
+              <p style={{ fontSize: "16px" }}>
                 When I'm coding, Shakira is my go-to companion, her music is
                 simply amazing, and playful.
               </p>
