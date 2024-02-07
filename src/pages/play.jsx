@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/navbar";
 import { Link } from "react-router-dom";
-import { Imdb, Letterboxd, Spotify } from "../components/svg";
+import { Letterboxd, Spotify } from "../components/svg";
 
 function Play() {
   useEffect(() => {
@@ -117,8 +117,6 @@ function Play() {
         <li>The Haunting of Hill House <br /> ~Shirly Jackson</li>
       </ul>
       </p>
-
-      <Header />
     </div>
   );
 }
