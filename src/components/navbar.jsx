@@ -34,7 +34,7 @@ function Navbar() {
             <button onClick={play}>Blog</button>
           </Link>
           <Link to="/play" className="link">
-            <button onClick={play}>Play</button>
+            <button onClick={play}>Me</button>
           </Link>
         </div>
       </div>
@@ -69,7 +69,7 @@ function Navbar() {
             </Link>
             <Link to="/play" className="link">
               <span className="link-button" onClick={play}>
-                Play
+                Me
               </span>
             </Link>
           </div>

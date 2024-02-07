@@ -152,10 +152,9 @@ function Home() {
                 textAlign: "end",
               }}
             >
-              <em style={{ fontSize: "20px" }}>Play</em>
+              <em style={{ fontSize: "20px" }}>Me</em>
               <p style={{ fontSize: "16px" }}>
-                Shakira is my go-to companion, her music is
-                simply amazing.
+                Shakira, Kanye, Rick Riordan, Shirly Jackson and Christopher Nolan 
               </p>
             </button>
           </Link>
@@ -200,7 +199,7 @@ function Home() {
         </span>
 
         <span className="skill-span">
-          <a className="Link" href="https://x.com/eternallyMarsh">
+          <a className="Link" href="https://x.com/eternallyMarsh?t=xcnqLKgEzIopgvV4e59AnA&s=09">
           <TwitterX />
           </a>
         </span>
@@ -212,7 +211,7 @@ function Home() {
         </span>
 
         <span className="skill-span">
-          <a className="Link" href="https://instagram.com/forever.marsh">
+          <a className="Link" href="eternallymarsh04@gmail.com">
           <Email />
           </a>
         </span>
