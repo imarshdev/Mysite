@@ -33,8 +33,8 @@ function Navbar() {
           <Link to="/notes" className="link">
             <button onClick={play}>Blog</button>
           </Link>
-          <Link to="/contacts" className="link">
-            <button onClick={play}>Contact</button>
+          <Link to="/play" className="link">
+            <button onClick={play}>Play</button>
           </Link>
         </div>
       </div>
@@ -67,9 +67,9 @@ function Navbar() {
                 Blog
               </span>
             </Link>
-            <Link to="/contacts" className="link">
+            <Link to="/play" className="link">
               <span className="link-button" onClick={play}>
-                Contact
+                Play
               </span>
             </Link>
           </div>

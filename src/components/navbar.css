@@ -18,7 +18,7 @@
   padding: 10px;
 }
 .link {
-  width: 18%;
+  width: 90%;
   height: 40px;
   border-radius: 10px;
   backdrop-filter: blur() 10px;
@@ -61,5 +61,6 @@
   .link-button {
     color: black;
     background-color: #e1efca;
+    width: 100%;
   }
 }

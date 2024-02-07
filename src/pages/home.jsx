@@ -2,6 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import clickSound from "../click_sound.mp3";
 import "../index.css";
+import {
+  Spotify,
+  Linkedin,
+  Discord,
+  Github,
+  Instagram,
+  TwitterX,
+  Snapchat,
+  Email,
+} from "../components/svg";
 
 function Home() {
   useEffect(()=>{
@@ -130,25 +140,6 @@ function Home() {
           </Link>
         </div>
 
-        <div onClick={play} className="link-div">
-          <Link
-            to="/contacts"
-            className="main-link"
-          >
-            <button
-              style={{
-                width: "100%",
-                textAlign: "end",
-              }}
-            >
-              <em style={{ fontSize: "20px" }}>Contact</em>
-              <p style={{ fontSize: "16px" }}>
-                Email or social media
-                handles, for potential clients or collaborators to get in touch.
-              </p>
-            </button>
-          </Link>
-        </div>
 
         <div onClick={play} className="link-div">
           <Link
@@ -185,8 +176,45 @@ function Home() {
           <h4>"THE WORLD IS BUT A CANVAS TO OUR IMAGINATION."</h4>
           <p>~Henry David Thoreau</p>
         </div>
+      </div>
+      <h1>Contacts</h1>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          width: "100%",
+          justifyContent: "center",
+        }}
+      >
+        <span className="skill-span">
+          <a className="Link" href="https://open.spotify.com/user/sgw331agtxe12j35fd5jrjfwb?si=lraPTE8-RJiXJ5EnHntdbA">
+          <Spotify />
+          </a>
+        </span>
 
+        <span className="skill-span">
+          <a className="Link" href="https://github.com/forevermarsh">
+          <Github />
+          </a>
+        </span>
 
+        <span className="skill-span">
+          <a className="Link" href="https://x.com/eternallyMarsh">
+          <TwitterX />
+          </a>
+        </span>
+
+        <span className="skill-span">
+          <a className="Link" href="https://instagram.com/forever.marsh">
+          <Instagram />
+          </a>
+        </span>
+
+        <span className="skill-span">
+          <a className="Link" href="https://instagram.com/forever.marsh">
+          <Email />
+          </a>
+        </span>
       </div>
     </div>
   );

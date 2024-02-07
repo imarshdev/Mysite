@@ -72,7 +72,7 @@ function About() {
         structures.
       </p>
 
-      <h1 style={{ padding: "0 5%" }}>Skills</h1>
+      <h1 style={{ padding: "0 5%" }}>Skills & Tools</h1>
       <div
         style={{
           display: "flex",
