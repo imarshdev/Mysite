@@ -117,6 +117,8 @@ function Play() {
         <li>The Haunting of Hill House <br /> ~Shirly Jackson</li>
       </ul>
       </p>
+
+      <Header />
     </div>
   );
 }
