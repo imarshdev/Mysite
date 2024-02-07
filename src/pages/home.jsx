@@ -177,7 +177,8 @@ function Home() {
           <p>~Henry David Thoreau</p>
         </div>
       </div>
-      <h1>Contacts</h1>
+
+      
       <div
         style={{
           display: "flex",

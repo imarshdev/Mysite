@@ -101,7 +101,7 @@ h1:hover {
 span {
   border-radius: 10px;
   backdrop-filter: blur(3px);
-  border: 1px solid rgba(173, 216, 230, 0.247);
+  border: 1px solid rgba(173, 216, 230, 0.486);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -118,7 +118,7 @@ span:hover {
 }
 button {
   border-radius: 8px;
-  border: 1px solid rgba(173, 216, 230, 0.425);
+  border: 1px solid rgba(173, 216, 230, 0.473);
   padding: 0.6em 1.2em;
   font-size: 1.3em;
   font-weight: 500;
@@ -145,7 +145,7 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background: rgba(255, 192, 203, 0.075);
+    background: rgb(255, 255, 255);
     backdrop-filter: blur(3px);
   }
 }
