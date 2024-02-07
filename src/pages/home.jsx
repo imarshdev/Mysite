@@ -83,7 +83,7 @@ function Home() {
             >
               <em style={{ fontSize: "20px" }}>About</em>
               <p style={{ fontSize: "16px" }}>
-                A brief overview of my background, skills, and experience as a
+                My background, skills, and experience as a
                 front-end developer.
               </p>
             </button>
@@ -103,8 +103,8 @@ function Home() {
             >
               <em style={{ fontSize: "20px" }}>Projects</em>
               <p style={{ fontSize: "16px" }}>
-                Showcasing a selection of my best projects with descriptions,
-                screenshots, and links to live demos or GitHub repositories.
+                My projects with descriptions,
+                screenshots, and links to GitHub repositories.
               </p>
             </button>
           </Link>
@@ -123,9 +123,8 @@ function Home() {
             >
               <em style={{ fontSize: "20px" }}>Blog</em>
               <p style={{ fontSize: "16px" }}>
-                I have written blog posts, articles and notes including PDF
-                books related to front-end development, This is a section
-                highlighting them.
+                Blog posts, articles, notes and PDF
+                books related to front-end development, 
               </p>
             </button>
           </Link>
@@ -144,7 +143,7 @@ function Home() {
             >
               <em style={{ fontSize: "20px" }}>Contact</em>
               <p style={{ fontSize: "16px" }}>
-                Providing my contact details, such as email or social media
+                Email or social media
                 handles, for potential clients or collaborators to get in touch.
               </p>
             </button>
@@ -164,8 +163,8 @@ function Home() {
             >
               <em style={{ fontSize: "20px" }}>Play</em>
               <p style={{ fontSize: "16px" }}>
-                When I'm coding, Shakira is my go-to companion, her music is
-                simply amazing, and playful.
+                Shakira is my go-to companion, her music is
+                simply amazing.
               </p>
             </button>
           </Link>
