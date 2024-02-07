@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/navbar";
 import { Link } from "react-router-dom";
 import "../index.css";
@@ -6,6 +6,14 @@ import { Spotify, Linkedin, Discord, Github, Imdb, Instagram, TwitterX, Snapchat
 
 
 function Contacts() {
+  useEffect(()=>{
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  },[]);
+
   return (
     <div
       style={{

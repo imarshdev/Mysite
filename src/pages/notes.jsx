@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/navbar";
 import { Link } from "react-router-dom";
 
 function Notes() {
+
+  useEffect(()=>{
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  },[]);
   return (
     <div
       style={{

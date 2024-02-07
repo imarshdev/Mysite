@@ -43,7 +43,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  place-items: start;
   min-width: 320px;
   min-height: 100vh;
   background-color: #fff;
@@ -115,12 +115,12 @@ span:hover {
 }
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid lightblue;
   padding: 0.6em 1.2em;
   font-size: 1.3em;
   font-weight: 500;
   font-family: assasin;
-  background-color: #1a1a1a;
+  background-color: #fff;
   backdrop-filter: blur(3px);
   cursor: pointer;
   transition: border-color 0.25s;
@@ -142,13 +142,13 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background: rgba(236, 232, 232, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(3px);
   }
 }
 
 .light {
-  background-color: #fff;
+  background-color: transparent;
 }
 .dark {
   background-color: #011826;
@@ -161,7 +161,7 @@ button:focus-visible {
 }
 
 .about-me {
-  padding: 0 5%;
+  padding: 0 10%;
 }
 .skill-button {
   display: flex;
@@ -179,14 +179,7 @@ button:focus-visible {
   padding-left: 10px;
 }
 
-.my-pic {
-  width: 15%;
-  height: 100%;
-  border-radius: 50px 50px 10px 10px;
-  background-image: url(/src/assets/pic.png);
-  background-size: cover;
-  background-position: center;
-}
+
 
 .topper {
   display: flex;
@@ -209,13 +202,6 @@ button:focus-visible {
     margin: 3%;
     margin-bottom: 12.5px;
   }
-  .my-pic {
-    width: 80%;
-    height: 100%;
-    border-radius: 50px 50px 10px 10px;
-    background-image: url(/src/assets/pic.png);
-    background-size: cover;
-  }
   .skill-span {
     width: 35%;
     margin: 3%;
@@ -233,14 +219,6 @@ button:focus-visible {
     display: flex;
     margin: 3%;
     height: 30dvh;
-  }
-  .my-pic {
-    width: 50%;
-    height: 100%;
-    border-radius: 50px 50px 10px 10px;
-    background-image: url(/src/assets/pic.png);
-    background-size: cover;
-    background-position: center;
   }
   .skill-span {
     width: 35%;

@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import clickSound from "../click_sound.mp3";
 import "../index.css";
 
 function Home() {
+  useEffect(()=>{
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  },[]);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMode = () => {
@@ -39,15 +46,14 @@ function Home() {
           justifyContent: "space-around",
         }}
       >
-        <h1>Hi I'm Mansur</h1>
+        <h1>EternallyMarsh</h1>
       </div>
 
       <div className="topper">
-        <div className="my-pic"></div>
         <div style={{width: '65%'}}>
           <h4 style={{ padding: "20px" }}>Senior Front-End Developer.</h4>
           <p style={{ padding: "0 20px" }}>
-            Hi... I'm Marsh, a software developer,<br />
+            Hi I'm Marsh, a software developer, I build SAAS things <br />
           </p>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Welcome from "./pages/welcome";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Notes from "./pages/notes";
@@ -14,8 +13,7 @@ function App() {
     <div style={{width: '100%'}}>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Welcome />} />
-          <Route path="/welcome" element={<Welcome />} />
+          <Route index element={<Home />} />
           <Route path="/home" element={<Home/>}/>
           <Route path="/about" element={<About />} />
           <Route path="/notes" element={<Notes />} />

@@ -1,4 +1,4 @@
-import React, { SVGProps } from "react";
+import React, { SVGProps, useEffect } from "react";
 import Navbar from "../components/navbar";
 import "../index.css";
 import Paypal, {
@@ -25,6 +25,14 @@ import Paypal, {
 import {} from "../components/svg";
 
 function About() {
+  useEffect(()=>{
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  },[]);
+
   return (
     <div
       style={{
@@ -39,11 +47,8 @@ function About() {
       <Navbar />
       <h1 style={{ padding: "0 5%" }}>About Me</h1>
       <p className="about-me">
-        I'm Marsh Mansur, a passionate 21-year-old front-end developer with a
-        knack for creating dynamic and user-friendly websites. Specializing in
-        React.js, I bring to the table a strong foundation in web development
-        coupled with a creative flair that turns complex designs into seamless
-        experiences.
+        I'm Marsh Mansur, I'm 21 years old and I'm a front-end developer. I
+        create dynamic and user-friendly websites. Specializing in React.js,
       </p>
       <p className="about-me">
         When I'm not coding, 'which is not often', I like to read books,
@@ -61,9 +66,10 @@ function About() {
       </p>
       <p className="about-me">
         As a software engineer, some of my major skills include programming
-        languages (such as Java, Javascript, Python, or C++), problem-solving, algorithm
-        design, and software development methodologies. Skills include version
-        control (e.g., Git), debugging, unit testing, and data structures.
+        languages (such as Java, Javascript, Python, or C++), problem-solving,
+        algorithm design, and software development methodologies. Skills include
+        version control (e.g., Git), debugging, unit testing, and data
+        structures.
       </p>
 
       <h1 style={{ padding: "0 5%" }}>Skills</h1>
@@ -137,14 +143,7 @@ function About() {
         </button>
       </div>
 
-
-
       <h1 style={{ padding: "0 5%" }}>Experience</h1>
-
-
-        
-
-
     </div>
   );
 }
