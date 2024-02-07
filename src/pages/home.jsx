@@ -14,13 +14,13 @@ import {
 } from "../components/svg";
 
 function Home() {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-  },[]);
+  }, []);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMode = () => {
@@ -60,7 +60,7 @@ function Home() {
       </div>
 
       <div className="topper">
-        <div style={{width: '65%'}}>
+        <div style={{ width: "65%" }}>
           <h4 style={{ padding: "20px" }}>Senior Front-End Developer.</h4>
           <p style={{ padding: "0 20px" }}>
             Hi I'm Marsh, a software developer, I build SAAS things <br />
@@ -81,10 +81,7 @@ function Home() {
         }}
       >
         <div onClick={play} className="link-div">
-          <Link
-            to="/about"
-            className="main-link"
-          >
+          <Link to="/about" className="main-link">
             <button
               style={{
                 width: "100%",
@@ -93,18 +90,14 @@ function Home() {
             >
               <em style={{ fontSize: "20px" }}>About</em>
               <p style={{ fontSize: "16px" }}>
-                My background, skills, and experience as a
-                front-end developer.
+                My background, skills, and experience as a front-end developer.
               </p>
             </button>
           </Link>
         </div>
 
         <div onClick={play} className="link-div">
-          <Link
-            to="/projects"
-            className="main-link"
-          >
+          <Link to="/projects" className="main-link">
             <button
               style={{
                 width: "100%",
@@ -113,18 +106,15 @@ function Home() {
             >
               <em style={{ fontSize: "20px" }}>Projects</em>
               <p style={{ fontSize: "16px" }}>
-                My projects with descriptions,
-                screenshots, and links to GitHub repositories.
+                My projects with descriptions, screenshots, and links to GitHub
+                repositories.
               </p>
             </button>
           </Link>
         </div>
 
         <div onClick={play} className="link-div">
-          <Link
-            to="/notes"
-            className="main-link"
-          >
+          <Link to="/notes" className="main-link">
             <button
               style={{
                 width: "100%",
@@ -133,19 +123,15 @@ function Home() {
             >
               <em style={{ fontSize: "20px" }}>Blog</em>
               <p style={{ fontSize: "16px" }}>
-                Blog posts, articles, notes and PDF
-                books related to front-end development, 
+                Blog posts, articles, notes and PDF books related to front-end
+                development,
               </p>
             </button>
           </Link>
         </div>
 
-
         <div onClick={play} className="link-div">
-          <Link
-            to="/play"
-            className="main-link"
-          >
+          <Link to="/play" className="main-link">
             <button
               style={{
                 width: "100%",
@@ -154,7 +140,8 @@ function Home() {
             >
               <em style={{ fontSize: "20px" }}>Me</em>
               <p style={{ fontSize: "16px" }}>
-                Shakira, Kanye, Rick Riordan, Shirly Jackson and Christopher Nolan 
+                Shakira, Kanye, Rick Riordan, Shirly Jackson and Christopher
+                Nolan
               </p>
             </button>
           </Link>
@@ -177,44 +164,51 @@ function Home() {
         </div>
       </div>
 
-      
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          width: "100%",
-          justifyContent: "center",
-        }}
-      >
-        <span className="skill-span">
-          <a className="Link" href="https://open.spotify.com/user/sgw331agtxe12j35fd5jrjfwb?si=lraPTE8-RJiXJ5EnHntdbA">
-          <Spotify />
-          </a>
-        </span>
+      <div style={{ height: "30vh" }}>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            width: "100%",
+            justifyContent: "center",
+          }}
+        >
+          <span className="skill-span">
+            <a
+              className="Link"
+              href="https://open.spotify.com/user/sgw331agtxe12j35fd5jrjfwb?si=lraPTE8-RJiXJ5EnHntdbA"
+            >
+              <Spotify />
+            </a>
+          </span>
 
-        <span className="skill-span">
-          <a className="Link" href="https://github.com/forevermarsh">
-          <Github />
-          </a>
-        </span>
+          <span className="skill-span">
+            <a className="Link" href="https://github.com/forevermarsh">
+              <Github />
+            </a>
+          </span>
 
-        <span className="skill-span">
-          <a className="Link" href="https://x.com/eternallyMarsh?t=xcnqLKgEzIopgvV4e59AnA&s=09">
-          <TwitterX />
-          </a>
-        </span>
+          <span className="skill-span">
+            <a
+              className="Link"
+              href="https://x.com/eternallyMarsh?t=xcnqLKgEzIopgvV4e59AnA&s=09"
+            >
+              <TwitterX />
+            </a>
+          </span>
 
-        <span className="skill-span">
-          <a className="Link" href="https://instagram.com/forever.marsh">
-          <Instagram />
-          </a>
-        </span>
+          <span className="skill-span">
+            <a className="Link" href="https://instagram.com/forever.marsh">
+              <Instagram />
+            </a>
+          </span>
 
-        <span className="skill-span">
-          <a className="Link" href="eternallymarsh04@gmail.com">
-          <Email />
-          </a>
-        </span>
+          <span className="skill-span">
+            <a className="Link" href="eternallymarsh04@gmail.com">
+              <Email />
+            </a>
+          </span>
+        </div>
       </div>
     </div>
   );
