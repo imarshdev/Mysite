@@ -28,7 +28,7 @@ function Play() {
         to music no matter the situation or emotional state. <br />I genuinely
         can't say what my favourite song is, I have one or two for every
         specific mood at the time. <br />
-        When i think <em>"favourite + artist"</em> I think <b>Ruth B</b>I listen
+        When i think <em>"favourite + artist"</em> I think <b>Ruth B</b> I listen
         to the Safe Heaven Album atleast once a day.
       </p>
 
