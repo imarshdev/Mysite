@@ -39,13 +39,14 @@ function Play() {
       </p>
 
 
-      <span className="skill-span" style={{ width: "40%" }}>
+      <span style={{ width: "40%" }}>
         <a
           className="Link"
           style={{
             width: "100%",
             display: "flex",
             alignItems: "start",
+            textDecoration: 'none'
           }}
           href="https://open.spotify.com/playlist/7vwApBAR0SqbXmqxrFmrk9?si=vpz1JtYKSzOLeKq46kLMPQ"
         >
@@ -65,13 +66,14 @@ function Play() {
         </b>
       </p>
 
-      <span className="skill-span" style={{ width: "40%" }}>
+      <span style={{ width: "40%" }}>
         <a
           className="Link"
           style={{
             width: "100%",
             display: "flex",
             alignItems: "start",
+            textDecoration: 'none'
           }}
           href="https://boxd.it/8LFkD"
         >

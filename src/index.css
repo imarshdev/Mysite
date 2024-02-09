@@ -3,8 +3,8 @@
   src: url(/src/assets/Assassin$.ttf);
 }
 @font-face {
-  font-family: cavier;
-  src: url(/src/assets/Helvetica.ttf);
+  font-family: lora;
+  src: url(/src/assets/lora.ttf);
 }
 @font-face {
   font-family: play;
@@ -14,7 +14,7 @@
   font-family: baker;
   src: url(/src/assets/BASKVILL.TTF);
 }
-.Link{
+.Link {
   text-decoration: none;
   color: black;
 }
@@ -49,7 +49,7 @@ body {
   place-items: start;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #fff;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -60,10 +60,10 @@ h3 {
   font-family: assasin;
   cursor: pointer;
 }
-p, h4{
-  font-family: assasin;
+p,
+h4 {
+  font-family: lora;
 }
-
 h1:hover {
   color: pink;
 }
@@ -100,21 +100,35 @@ h1:hover {
 }
 span {
   border-radius: 10px;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(30px);
   border: 1px solid rgba(173, 216, 230, 0.486);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0026ff00;
+  background-color: rgba(255, 192, 203, 0.164);
   width: 50px;
   margin: 10px;
   transition: 0.3s;
+  transition: transform 0.5s;
   padding: 10px;
   font-family: assasin;
 }
+a:hover {
+  color: black;
+}
 span:hover {
-  border-color: blue;
+  transform: scale(1.05);
+}
+.skill-span:hover {
+  transform: scale(1.5);
+}
+.main-buttons {
+  width: 95%;
+  transition: width 0.5s;
+}
+.main-buttons:hover {
+  width: 100%;
 }
 button {
   border-radius: 8px;
@@ -122,6 +136,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1.3em;
   font-weight: 500;
+  color: #5c474e;
   font-family: assasin;
   background-color: #fff;
   backdrop-filter: blur(3px);
@@ -175,18 +190,32 @@ button:focus-visible {
   transition: 0.3s;
   padding: 15px;
   cursor: pointer;
+  transition: transform 0.5s;
+}
+.skill-button:hover{
+  transform: scale(1.1);
 }
 
 .language {
   font-size: 16px;
   padding-left: 10px;
+  font-family: lora;
 }
 
-
+.picture {
+  width: 40%;
+  padding-top: 40%;
+  background: linear-gradient(45deg, #c9d0db, #fff);
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
+.picture:hover {
+  transform: scale(1.05);
+}
 
 .topper {
   display: flex;
-  height: 30vh;
+  height: 70vh;
   width: 70%;
   align-items: center;
 }
@@ -208,6 +237,11 @@ button:focus-visible {
   .skill-span {
     margin: 3%;
     margin-bottom: 12.5px;
+  }
+  .picture {
+    width: 60%;
+    padding-top: 60%;
+    background: linear-gradient(45deg, #c9d0db, #fff);
   }
 }
 
