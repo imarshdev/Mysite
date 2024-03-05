@@ -351,7 +351,7 @@ function Home() {
             <li>A RESTful API for a social media application</li>
             <li>An authentication service with OAuth integration</li>
             <li>A real-time bidding system for auctions</li>
-            <li>A content aggregation service (like a news feed)</li>
+            <li>A content aggregation service (news feed)</li>
             <li>A microservices architecture-based application</li>
             <li>A cloud-based file storage and sharing service</li>
             <li>A chatbot with natural language processing</li>
