@@ -282,7 +282,7 @@ function Home() {
             expecially Greek mythology fantasies, "The Percy Jackson Series, The
             Song of Achilles, Adriadne and more". I also workout... psych!!.
             Weekends for me are movie-time so I go to the movies with friends
-            and sometimes alone.
+            and sometimes, most times alone.
           </p>
           <p className="about-me">
             I just watched Dune part 2, the first movie was amazing but this one
