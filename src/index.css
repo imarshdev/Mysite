@@ -120,6 +120,11 @@ a:hover {
 span:hover {
   transform: scale(1.05);
 }
+.skill-span{
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
 .skill-span:hover {
   transform: scale(1.5);
 }
