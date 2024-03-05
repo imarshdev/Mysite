@@ -155,11 +155,14 @@ button:focus,
 button:focus-visible {
   outline: 0px auto -webkit-focus-ring-color;
 }
+.project-names{
+  font-family: lora;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: seashell;
   }
   a:hover {
     color: #747bff;

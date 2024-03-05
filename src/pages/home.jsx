@@ -26,6 +26,7 @@ import {
   Git,
   VscodeIcon,
   Letterboxd,
+  Menu,
 } from "../components/svg";
 
 // main component "home"
@@ -59,6 +60,7 @@ function Home() {
   const projectsRef = useRef(null);
   const blogRef = useRef(null);
   const meRef = useRef(null);
+  const topRef = useRef(null);
 
   const scrollToDiv = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
@@ -89,7 +91,7 @@ function Home() {
           <h1
             style={{ fontWeight: "bolder", color: "#152b42", fontSize: "3rem" }}
           >
-            Eternally <em style={{}}>Marsh</em>
+            <em>Marsh</em>
           </h1>
         </div>
 
@@ -106,6 +108,7 @@ function Home() {
 
         {/* this are links to sections */}
         <div
+          ref={topRef}
           className="light"
           style={{
             width: "90%",
@@ -206,60 +209,6 @@ function Home() {
           </div>
         </div>
 
-        {/* links to my social media */}
-        <div style={{ height: "30vh" }}>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              width: "100%",
-              justifyContent: "center",
-            }}
-          >
-            <span className="skill-span">
-              <a
-                className="Link"
-                href="https://open.spotify.com/user/sgw331agtxe12j35fd5jrjfwb?si=lraPTE8-RJiXJ5EnHntdbA"
-              >
-                <Spotify />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a className="Link" href="https://github.com/forevermarsh">
-                <Github />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a
-                className="Link"
-                href="https://x.com/eternallyMarsh?t=xcnqLKgEzIopgvV4e59AnA&s=09"
-              >
-                <TwitterX />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a className="Link" href="https://instagram.com/forever.marsh">
-                <Instagram />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a className="Link" href="eternallymarsh04@gmail.com">
-                <Email />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a className="Link" href="eternallymarsh04@gmail.com">
-                <Discord />
-              </a>
-            </span>
-          </div>
-        </div>
-
         {/* new section for my About content */}
         <div
           ref={aboutRef}
@@ -274,36 +223,25 @@ function Home() {
         >
           <h1 style={{ padding: "0 5%" }}>About Me</h1>
           <p className="about-me">
-            I'm Marsh Mansur, I'm 21 years old and I'm a front-end developer. I
-            create dynamic and user-friendly websites. Specializing in React.js,
+            I'm Marsh Mansur, 21 and a front-end developer. I create dynamic and
+            user-friendly websites. Specializing in React.js. <br /> I'm not
+            good at fancy talk but I definitely know how to get things done. I
+            have excellent verbal and written communication skills, with the
+            ability to express ideas clearly and concisely. I also have strong
+            listening skills and the ability to understand and respond
+            effectively to others. I've had experience in collaborating with
+            diverse teams and fostering open communication and public speaking
+            engagements...
           </p>
           <p className="about-me">
-            When I'm not coding, 'which is not often', I like to read books,
-            expecially Greek mythology fantasies, "The Percy Jackson Series, The
-            Song of Achilles, Adriadne and more". I also workout... psych!!.
-            Weekends for me are movie-time so I go to the movies with friends
-            and sometimes, most times alone.
-          </p>
-          <p className="about-me">
-            I just watched Dune part 2, the first movie was amazing but this one
-            is just something else entirely. I bought the six Og dune books and
-            I'm gonna be reading them in the very little extra time I get. Denis
-            Villeneuve just made my top three movie directors and Dune part two
-            just become my secon favourite movie of all time.
-          </p>
-          <p className="about-me">
-            From a young age, music has always been a major part of my life, it
-            has helped me overcome tough situations and put me in tough
-            situations as well. I feel like proper music can be a tune that puts
-            us in proper flow with life and existance in general. When I started
-            coding it was a bit challenging but with the right song playing, I
-            can accomplish anything.
+            What I'm looking for is to obtain a challenging position where I can
+            utilize my skills and contribute to the success of the company.
           </p>
           <p className="about-me">
             As a software engineer, some of my major skills include programming
-            languages (such as Java, Javascript, Python, or C++),
+            languages (such as Java, Javascript, Python, and C++),
             problem-solving, algorithm design, and software development
-            methodologies. Skills include version control (e.g., Git),
+            methodologies. Other skills include version control (e.g., Git),
             debugging, unit testing, and data structures.
           </p>
           <h1 style={{ padding: "0 5%" }}>Skills & Tools</h1>
@@ -391,11 +329,35 @@ function Home() {
           }}
         >
           <h1>Projects</h1>
-          <ul>
-            <li>ToDoList WebApp</li>
-            <li>Chat App</li>
+          <p style={{ padding: "0 10%", textAlign: "center" }}>
+            The way I keep my skills upto date is by doing stuff, building
+            stuff. I get basic ideas like To-do lists and put a little fun in
+            it. I also work on random projects on Github repositories and
+            instagram reels. Out of all the stuff I've built, here are my top 20
+          </p>
+          <ul className="project-names">
+            <p>Front-End</p>
+            <li>Real Time Chat App</li>
             <li>Music Player</li>
-            <li>Movie Library App</li>
+            <li>Single page application (SPA) using Angular</li>
+            <li>Movie Library App (PWA with offline mode)</li>
+            <li>Custom theme for Contant Management</li>
+            <li>Browser extension (Grammarly)</li>
+            <li>Blockchain smart contract</li>
+            <li>E-commerce shopping site</li>
+            <li>Interactive data visualization dashboard using D3.js</li>
+            <li>ToDoList WebApp... obviously</li>
+            <p>Back-end</p>
+            <li>A RESTful API for a social media application</li>
+            <li>An authentication service with OAuth integration</li>
+            <li>A real-time bidding system for auctions</li>
+            <li>A content aggregation service (like a news feed)</li>
+            <li>A microservices architecture-based application</li>
+            <li>A cloud-based file storage and sharing service</li>
+            <li>A chatbot with natural language processing</li>
+            <li>A search engine with a custom algorithm</li>
+            <li>An IoT system backend for device management</li>
+            <li>A recommendation engine based on user behavior</li>
           </ul>
         </div>
 
@@ -411,18 +373,42 @@ function Home() {
           }}
         >
           <h1>Here's What I love</h1>
+          <p className="about-me">
+            When I'm not coding, 'which is not often', I like to read books,
+            expecially Greek mythology fantasies, "The Percy Jackson Series, The
+            Song of Achilles, Adriadne and more". I also workout... psych!!.
+            <br />
+            Weekends for me are movie-time so I go to the movies with friends
+            and sometimes, most times alone.
+          </p>
+          <p className="about-me">
+            I just watched Dune part 2, the first movie was amazing but this one
+            is just something else entirely. I bought the six Og dune books and
+            I'm gonna be binge reading. Denis Villeneuve just made my top three
+            movie directors of all time and Dune part two just become my secon
+            favourite movie of all time.
+          </p>
+          <p className="about-me">
+            From a young age, music has always been a major part of my life, it
+            has helped me overcome tough situations and put me in tough
+            situations as well. I feel like proper music can be a tune that puts
+            us in proper flow with life and existance in general. When I started
+            coding it was a bit challenging but with the right song playing, I
+            can accomplish anything.
+          </p>
           <p style={{ padding: "0 10%", textAlign: "center" }}>
-            Music has been very necessary in almost all aspects of my life. I
-            listen to music no matter the situation or emotional state. <br />I
-            genuinely can't say what my favourite song is, I have one or two for
-            every specific mood at the time. <br />
-            When i think <em>"favourite + artist"</em> I think <b>Ruth B</b> I
-            listen to the Safe Heaven Album atleast once a day.
+            I genuinely can't say what my favourite song is, I have one or two
+            for every specific mood of the time. <br />
+            But when i think <em>"favourite + artist,"</em> I think{" "}
+            <b>Ruth B</b> I listen to the Safe Heaven Album atleast five times a
+            day.
           </p>
 
           <p style={{ padding: "0 10%", textAlign: "center" }}>
-            Other artists I listen to are Shakira, Kanye West, Megan Washington,
-            Rosa Linn and the one and only Billie Eilish
+            Other artists I listen to are
+            <b>
+              Kanye West, Doja Cat, Shakira, Megan Washington and Billie Eilish
+            </b>
           </p>
 
           <span style={{ width: "40%" }}>
@@ -442,13 +428,13 @@ function Home() {
           </span>
 
           <p style={{ padding: "0 10%", textAlign: "center" }}>
-            "Cinema," a creation by Auguste and Luis Lumiere. I love movies and
-            tv, people say it's an escape from reality but it's a visit to the
-            limits of reality. <br />
+            <b>"Cinema,"</b> a creation by Auguste and Luis Lumiere. I love
+            movies and tv, people say it's an escape from reality but it's a
+            visit to the limits of reality. <br />
             Over my young life, I've come to appreciate the work of directors{" "}
             <b>
-              Quentin Tarantino, Martin Scorsese, David Fincher and Christopher
-              Nolan
+              David Fincher, Denis Villeneuve, Christopher Nolan and Quentin
+              Tarantino.
             </b>
           </p>
 
@@ -498,7 +484,9 @@ function Home() {
           <p style={{ padding: "0 10%" }}>
             These are the books I read <br />
             <ul>
-              <li>Dune Series</li>
+              <li>
+                Dune Series <br /> ~Frank Herbert
+              </li>
               <li>
                 Percy Jackson Series (on repeat) <br /> ~Rick Riordan
               </li>
@@ -518,6 +506,63 @@ function Home() {
           </p>
         </div>
 
+        {/* links to my social media */}
+        <div style={{ height: "30vh" }}>
+          <p style={{ padding: "0 10%", textAlign: "center" }}>
+            Check me out...
+          </p>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              width: "100%",
+              justifyContent: "center",
+            }}
+          >
+            <span className="skill-span">
+              <a
+                className="Link"
+                href="https://open.spotify.com/user/sgw331agtxe12j35fd5jrjfwb?si=lraPTE8-RJiXJ5EnHntdbA"
+              >
+                <Spotify />
+              </a>
+            </span>
+
+            <span className="skill-span">
+              <a className="Link" href="https://github.com/forevermarsh">
+                <Github />
+              </a>
+            </span>
+
+            <span className="skill-span">
+              <a
+                className="Link"
+                href="https://x.com/eternallyMarsh?t=xcnqLKgEzIopgvV4e59AnA&s=09"
+              >
+                <TwitterX />
+              </a>
+            </span>
+
+            <span className="skill-span">
+              <a className="Link" href="https://instagram.com/forever.marsh">
+                <Instagram />
+              </a>
+            </span>
+
+            <span className="skill-span">
+              <a className="Link" href="eternallymarsh04@gmail.com">
+                <Email />
+              </a>
+            </span>
+
+            <span className="skill-span">
+              <a className="Link" href="eternallymarsh04@gmail.com">
+                <Discord />
+              </a>
+            </span>
+          </div>
+        </div>
+
         {/* new section for my blog content */}
         <div
           ref={blogRef}
@@ -530,7 +575,27 @@ function Home() {
           }}
         >
           <h1 style={{ color: "black" }}>Blog</h1>
+          <p style={{ padding: "0 10%", textAlign: "center" }}>
+            welcome to my blog, I'm not entirely sure what the purpose of a blog
+            is but I for sure know its to say things I like, do and to give
+            programming tips
+          </p>
         </div>
+        <span
+          onClick={() => scrollToDiv(topRef)}
+          className="skill-span"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "1rem",
+            position: "fixed",
+            bottom: 0,
+            right: 0,
+          }}
+        >
+          <Menu />
+        </span>
       </div>
     </div>
   );
