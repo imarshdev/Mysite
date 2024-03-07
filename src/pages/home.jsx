@@ -27,23 +27,26 @@ import {
   VscodeIcon,
   Letterboxd,
   Menu,
+  Close,
 } from "../components/svg";
 
 // main component "home"
 function Home() {
-  // this was usefull but not quite anymore, i use useEffect to prevent react-router-dom from accessing a new page fro, the exact point the previous page was at
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
   // not entirely usefull but whatever
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  // opening and closing navigation panel
+  const [isOpen, setIsOpen] = useState(false);
   const toggleMode = () => {
     setIsDarkMode(!isDarkMode);
+  };
+
+  const openNav = () => {
+    setIsOpen(true);
+  };
+
+  const closeNav = () => {
+    setIsOpen(false);
   };
 
   // the click sound you hear
@@ -91,7 +94,7 @@ function Home() {
           <h1
             style={{ fontWeight: "bolder", color: "#152b42", fontSize: "3rem" }}
           >
-            <em>Marsh</em>
+            <em>marsh</em>
           </h1>
         </div>
 
@@ -99,9 +102,10 @@ function Home() {
         <div className="topper">
           <div className="picture"></div>
           <div style={{ width: "65%" }}>
-            <h4 style={{ padding: "20px" }}>Senior Front-End Developer.</h4>
+            <h4 style={{ padding: "20px" }}>Senior software Engineer.</h4>
             <p style={{ padding: "0 20px" }}>
-              Hi I'm Marsh, a software developer, I build SAAS things <br />
+              Hi I'm Marsh🍃, a software developer, I build anything and
+              everything <br />
             </p>
           </div>
         </div>
@@ -120,7 +124,7 @@ function Home() {
             padding: "20px",
           }}
         >
-          <div onClick={play} className="link-div">
+          <div className="link-div">
             <Link onClick={() => scrollToDiv(aboutRef)} className="main-link">
               <button
                 className="main-buttons"
@@ -128,7 +132,7 @@ function Home() {
                   textAlign: "end",
                 }}
               >
-                <em style={{ fontSize: "20px" }}>About</em>
+                <em style={{ fontSize: "20px" }}>About🕊️</em>
                 <p style={{ fontSize: "14px" }}>
                   My background, skills, and experience as a front-end
                   developer.
@@ -137,7 +141,7 @@ function Home() {
             </Link>
           </div>
 
-          <div onClick={play} className="link-div">
+          <div className="link-div">
             <Link
               onClick={() => scrollToDiv(projectsRef)}
               className="main-link"
@@ -148,7 +152,7 @@ function Home() {
                   textAlign: "end",
                 }}
               >
-                <em style={{ fontSize: "20px" }}>Projects</em>
+                <em style={{ fontSize: "20px" }}>Projects🛠</em>
                 <p style={{ fontSize: "14px" }}>
                   Projects with descriptions, screenshots, and links to GitHub
                   repositories.
@@ -157,7 +161,7 @@ function Home() {
             </Link>
           </div>
 
-          <div onClick={play} className="link-div">
+          <div className="link-div">
             <Link onClick={() => scrollToDiv(meRef)} className="main-link">
               <button
                 className="main-buttons"
@@ -165,16 +169,16 @@ function Home() {
                   textAlign: "end",
                 }}
               >
-                <em style={{ fontSize: "20px" }}>Me</em>
+                <em style={{ fontSize: "20px" }}>Me🥷🏾</em>
                 <p style={{ fontSize: "14px" }}>
-                  Shakira, Kanye, R. Riordan, Shirly Jackson and Christopher
-                  Nolan
+                  What I love, from music I listen to, to the books I read and
+                  stuff
                 </p>
               </button>
             </Link>
           </div>
 
-          <div onClick={play} className="link-div">
+          <div className="link-div">
             <Link onClick={() => scrollToDiv(blogRef)} className="main-link">
               <button
                 className="main-buttons"
@@ -182,7 +186,7 @@ function Home() {
                   textAlign: "end",
                 }}
               >
-                <em style={{ fontSize: "20px" }}>Blog</em>
+                <em style={{ fontSize: "20px" }}>Blog📚</em>
                 <p style={{ fontSize: "14px" }}>
                   Posts, articles, notes and PDF books related to front-end
                   development,
@@ -223,19 +227,22 @@ function Home() {
         >
           <h1 style={{ padding: "0 5%" }}>About Me</h1>
           <p className="about-me">
-            I'm Marsh Mansur, 21 and a front-end developer. I create dynamic and
-            user-friendly websites. Specializing in React.js. <br /> I'm not
-            good at fancy talk but I definitely know how to get things done. I
-            have excellent verbal and written communication skills, with the
-            ability to express ideas clearly and concisely. I also have strong
-            listening skills and the ability to understand and respond
-            effectively to others. I've had experience in collaborating with
-            diverse teams and fostering open communication and public speaking
-            engagements...
+            I'm Chelangat Marsh Mansur, 21 and a full-stack developer. I create
+            dynamic and user-friendly software. Specializing mainly in React.js.{" "}
+            <br /> I'm not good at fancy talk but I definitely know how to get
+            things done. I have excellent verbal and written communication
+            skills, with the ability to express ideas clearly and concisely. I
+            also have strong listening skills and the ability to understand and
+            respond effectively to others. I've had experience in collaborating
+            with diverse teams and fostering open communication and public
+            speaking engagements. I have a{" "}
+            <b>Bachelor's degree in Computer Science</b> from the{" "}
+            <b>Sai Pali Institute of Technology</b>
           </p>
           <p className="about-me">
             What I'm looking for is to obtain a challenging position where I can
-            utilize my skills and contribute to the success of the company.
+            utilize my skills and contribute to the overral success of my team
+            or company.
           </p>
           <p className="about-me">
             As a software engineer, some of my major skills include programming
@@ -246,7 +253,6 @@ function Home() {
           </p>
           <h1 style={{ padding: "0 5%" }}>Skills & Tools</h1>
           <div
-            onClick={play}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -333,31 +339,64 @@ function Home() {
             The way I keep my skills upto date is by doing stuff, building
             stuff. I get basic ideas like To-do lists and put a little fun in
             it. I also work on random projects on Github repositories and
-            instagram reels. Out of all the stuff I've built, here are my top 20
+            instagram reels. Out of all the stuff I've built, here are my top
+            20... feel free to check them out
           </p>
           <ul className="project-names">
-            <p>Front-End</p>
-            <li>Real Time Chat App</li>
-            <li>Music Player</li>
-            <li>Single page application (SPA) using Angular</li>
-            <li>Movie Library App (PWA with offline mode)</li>
-            <li>Custom theme for Contant Management</li>
-            <li>Browser extension (Grammarly)</li>
-            <li>Blockchain smart contract</li>
-            <li>E-commerce shopping site</li>
-            <li>Interactive data visualization dashboard using D3.js</li>
-            <li>ToDoList WebApp... obviously</li>
-            <p>Back-end</p>
-            <li>A RESTful API for a social media application</li>
-            <li>An authentication service with OAuth integration</li>
-            <li>A real-time bidding system for auctions</li>
-            <li>A content aggregation service (news feed)</li>
-            <li>A microservices architecture-based application</li>
-            <li>A cloud-based file storage and sharing service</li>
-            <li>A chatbot with natural language processing</li>
-            <li>A search engine with a custom algorithm</li>
-            <li>An IoT system backend for device management</li>
-            <li>A recommendation engine based on user behavior</li>
+            <p>
+              <b>Front-End</b>
+            </p>
+            <li className="project-name">Real Time Chat App</li>
+            <li className="project-name">Music Player</li>
+            <li className="project-name">
+              Single page application (SPA) using Angular
+            </li>
+            <li className="project-name">
+              Movie Library App (PWA with offline mode)
+            </li>
+            <li className="project-name">
+              Custom theme for Contant Management
+            </li>
+            <li className="project-name">Browser extension (Grammarly)</li>
+            <li className="project-name">Blockchain smart contract</li>
+            <li className="project-name">E-commerce shopping site</li>
+            <li className="project-name">
+              Interactive data visualization dashboard using D3.js
+            </li>
+            <li className="project-name">ToDoList WebApp... obviously</li>
+            <p>
+              <b>Front-End</b>
+            </p>
+            <li className="project-name">
+              A RESTful API for a social media application
+            </li>
+            <li className="project-name">
+              An authentication service with OAuth integration
+            </li>
+            <li className="project-name">
+              A real-time bidding system for auctions
+            </li>
+            <li className="project-name">
+              A content aggregation service (news feed)
+            </li>
+            <li className="project-name">
+              A microservices architecture-based application
+            </li>
+            <li className="project-name">
+              A cloud-based file storage and sharing service
+            </li>
+            <li className="project-name">
+              A chatbot with natural language processing
+            </li>
+            <li className="project-name">
+              A search engine with a custom algorithm
+            </li>
+            <li className="project-name">
+              An IoT system backend for device management
+            </li>
+            <li className="project-name">
+              A recommendation engine based on user behavior
+            </li>
           </ul>
         </div>
 
@@ -462,10 +501,10 @@ function Home() {
           <p style={{ padding: "0 10%" }}>
             My Favourite movies are; <br />
             <ul>
-              <li>Gone Girl</li>
-              <li>Dune Part 2</li>
-              <li>Fight Club</li>
               <li>Intersteller</li>
+              <li>Dune Part 2</li>
+              <li>Gone Girl</li>
+              <li>Fight Club</li>
               <li>Beetlejuice</li>
             </ul>
           </p>
@@ -582,19 +621,129 @@ function Home() {
           </p>
         </div>
         <span
-          onClick={() => scrollToDiv(topRef)}
-          className="skill-span"
+          onClick={openNav}
           style={{
-            display: "flex",
+            display: isOpen ? "none" : "flex",
             justifyContent: "center",
             alignItems: "center",
             margin: "1rem",
             position: "fixed",
             bottom: 0,
             right: 0,
+            width: "2rem",
+            height: "2rem",
+            borderRadius: "50%",
           }}
         >
           <Menu />
+        </span>
+      </div>
+
+      <div
+        className="navigation-panel"
+        style={{ display: isOpen ? "initial" : "none" }}
+      >
+        {/* this are links to sections */}
+        <div
+          ref={topRef}
+          className="light"
+          style={{
+            width: "90%",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+            alignItems: "start",
+            padding: "20px",
+          }}
+        >
+          <div className="link-div" onClick={closeNav}>
+            <Link onClick={() => scrollToDiv(aboutRef)} className="main-link">
+              <button
+                className="main-buttons"
+                style={{
+                  textAlign: "end",
+                }}
+              >
+                <em style={{ fontSize: "20px" }}>About</em>
+                <p style={{ fontSize: "14px" }}>
+                  My background, skills, and experience as a front-end
+                  developer.
+                </p>
+              </button>
+            </Link>
+          </div>
+
+          <div className="link-div" onClick={closeNav}>
+            <Link
+              onClick={() => scrollToDiv(projectsRef)}
+              className="main-link"
+            >
+              <button
+                className="main-buttons"
+                style={{
+                  textAlign: "end",
+                }}
+              >
+                <em style={{ fontSize: "20px" }}>Projects</em>
+                <p style={{ fontSize: "14px" }}>
+                  Projects with descriptions, screenshots, and links to GitHub
+                  repositories.
+                </p>
+              </button>
+            </Link>
+          </div>
+
+          <div className="link-div" onClick={closeNav}>
+            <Link onClick={() => scrollToDiv(meRef)} className="main-link">
+              <button
+                className="main-buttons"
+                style={{
+                  textAlign: "end",
+                }}
+              >
+                <em style={{ fontSize: "20px" }}>Me</em>
+                <p style={{ fontSize: "14px" }}>
+                  Shakira, Kanye, R. Riordan, Shirly Jackson and Christopher
+                  Nolan
+                </p>
+              </button>
+            </Link>
+          </div>
+
+          <div className="link-div" onClick={closeNav}>
+            <Link onClick={() => scrollToDiv(blogRef)} className="main-link">
+              <button
+                className="main-buttons"
+                style={{
+                  textAlign: "end",
+                }}
+              >
+                <em style={{ fontSize: "20px" }}>Blog</em>
+                <p style={{ fontSize: "14px" }}>
+                  Posts, articles, notes and PDF books related to front-end
+                  development,
+                </p>
+              </button>
+            </Link>
+          </div>
+        </div>
+        <span
+          onClick={closeNav}
+          style={{
+            display: isOpen ? "flex" : "none",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "1rem",
+            position: "fixed",
+            bottom: 0,
+            right: 0,
+            width: "2rem",
+            height: "2rem",
+            borderRadius: "50%",
+          }}
+        >
+          <Close />
         </span>
       </div>
     </div>

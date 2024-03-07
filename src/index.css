@@ -106,7 +106,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 192, 203, 0.164);
+  background-color: white;
   width: 50px;
   margin: 10px;
   transition: 0.3s;
@@ -120,10 +120,10 @@ a:hover {
 span:hover {
   transform: scale(1.05);
 }
-.skill-span{
+.skill-span {
   border-radius: 50%;
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
 }
 .skill-span:hover {
   transform: scale(1.5);
@@ -155,8 +155,16 @@ button:focus,
 button:focus-visible {
   outline: 0px auto -webkit-focus-ring-color;
 }
-.project-names{
+.project-names {
   font-family: lora;
+}
+.project-name:hover {
+  transform: scale(1.1);
+  color: black;
+}
+.project-name {
+  cursor: pointer;
+  transition: transform 0.5s;
 }
 
 @media (prefers-color-scheme: light) {
@@ -200,7 +208,7 @@ button:focus-visible {
   cursor: pointer;
   transition: transform 0.5s;
 }
-.skill-button:hover{
+.skill-button:hover {
   transform: scale(1.1);
 }
 
@@ -272,4 +280,16 @@ button:focus-visible {
     width: 40%;
     margin-top: 20px;
   }
+}
+
+
+.navigation-panel{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  background-color: aliceblue;
+  overflow: hidden;
 }
