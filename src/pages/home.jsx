@@ -101,7 +101,7 @@ function Home() {
         {/* topper with description */}
         <div className="topper">
           <div className="picture"></div>
-          <div style={{ width: "65%" }}>
+          <div style={{ width: "85%" }}>
             <h4 style={{ padding: "20px" }}>Senior software Engineer.</h4>
             <p style={{ padding: "0 20px" }}>
               Hi I'm Marsh🍃, a software developer, I build anything and
@@ -132,7 +132,7 @@ function Home() {
                   textAlign: "end",
                 }}
               >
-                <em style={{ fontSize: "20px" }}>About🕊️</em>
+                <em style={{ fontSize: "20px" }}>About 🕊️</em>
                 <p style={{ fontSize: "14px" }}>
                   My background, skills, and experience as a front-end
                   developer.
@@ -152,7 +152,7 @@ function Home() {
                   textAlign: "end",
                 }}
               >
-                <em style={{ fontSize: "20px" }}>Projects🛠</em>
+                <em style={{ fontSize: "20px" }}>Projects 🛠</em>
                 <p style={{ fontSize: "14px" }}>
                   Projects with descriptions, screenshots, and links to GitHub
                   repositories.
@@ -169,9 +169,9 @@ function Home() {
                   textAlign: "end",
                 }}
               >
-                <em style={{ fontSize: "20px" }}>Me🥷🏾</em>
+                <em style={{ fontSize: "20px" }}>Me 🥷🏾</em>
                 <p style={{ fontSize: "14px" }}>
-                  What I love, from music I listen to, to the books I read and
+                  What I love, from music and movies to the books I read and
                   stuff
                 </p>
               </button>
@@ -186,7 +186,7 @@ function Home() {
                   textAlign: "end",
                 }}
               >
-                <em style={{ fontSize: "20px" }}>Blog📚</em>
+                <em style={{ fontSize: "20px" }}>Blog 📚</em>
                 <p style={{ fontSize: "14px" }}>
                   Posts, articles, notes and PDF books related to front-end
                   development,
