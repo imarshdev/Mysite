@@ -41,10 +41,11 @@ function Home() {
     setIsDarkMode(!isDarkMode);
   };
 
+  // opening navbar
   const openNav = () => {
     setIsOpen(true);
   };
-
+  // closing navbar
   const closeNav = () => {
     setIsOpen(false);
   };
@@ -53,6 +54,32 @@ function Home() {
   function play() {
     new Audio(clickSound).play();
   }
+
+  const FrontEndProjects = [
+    "Real Time Chat App",
+    "Music Player",
+    "Single page application (SPA) using Angular",
+    "Movie Library App (PWA with offline mode)",
+    "Custom theme for Contant Management",
+    "Browser extension (Grammarly)",
+    "Blockchain smart contract",
+    "E-commerce shopping site",
+    "Interactive data visualization dashboard using D3.js",
+    "ToDoList WebApp... obviously",
+  ];
+
+  const BackEndProjects = [
+    "A RESTful API for a social media application",
+    "An authentication service with OAuth integration",
+    "A real - time bidding system for Authenticator Assertion Response",
+    "A content aggregation service(news feed)",
+    "A microservices architecture-based application",
+    "A cloud-based file storage and sharing service",
+    "A chatbot with natural language processing",
+    "A search engine with a custom algorithm",
+    "An IoT system backend for device management",
+    "A recommendation engine based on user behavior",
+  ];
 
   const all = () => {
     play();
@@ -100,12 +127,26 @@ function Home() {
 
         {/* topper with description */}
         <div className="topper">
-          <div className="picture"></div>
+          <div
+            style={{
+              width: "15rem",
+              height: "15rem",
+              background: "linear-gradient(45deg, #fff, #fff, #c9d0db)",
+              borderRadius: "50%",
+            }}
+          >
+            <div
+              className="booo"
+              style={{
+                width: "15rem",
+                height: "15rem",
+              }}
+            ></div>
+          </div>
           <div style={{ width: "85%" }}>
-            <h4 style={{ padding: "20px" }}>Senior software Engineer.</h4>
+            <h4 style={{ padding: "20px" }}>Full-Stack Dev. </h4>
             <p style={{ padding: "0 20px" }}>
-              Hi I'm Marsh🍃, a software developer, I build anything and
-              everything <br />
+              I'm Marsh🍃, I build anything and everything <br />
             </p>
           </div>
         </div>
@@ -213,6 +254,63 @@ function Home() {
           </div>
         </div>
 
+        {/* links to my social media */}
+        <div style={{ height: "30vh" }}>
+          <p style={{ padding: "0 10%", textAlign: "center" }}>
+            Check me out...
+          </p>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              width: "100%",
+              justifyContent: "center",
+            }}
+          >
+            <span style={{ border: "solid 0" }} className="skill-span">
+              <a
+                className="Link"
+                href="https://open.spotify.com/user/sgw331agtxe12j35fd5jrjfwb?si=lraPTE8-RJiXJ5EnHntdbA"
+              >
+                <Spotify />
+              </a>
+            </span>
+
+            <span style={{ border: "solid 0" }} className="skill-span">
+              <a className="Link" href="https://github.com/forevermarsh">
+                <Github />
+              </a>
+            </span>
+
+            <span style={{ border: "solid 0" }} className="skill-span">
+              <a
+                className="Link"
+                href="https://x.com/eternallyMarsh?t=xcnqLKgEzIopgvV4e59AnA&s=09"
+              >
+                <TwitterX />
+              </a>
+            </span>
+
+            <span style={{ border: "solid 0" }} className="skill-span">
+              <a className="Link" href="https://instagram.com/forever.marsh">
+                <Instagram />
+              </a>
+            </span>
+
+            <span style={{ border: "solid 0" }} className="skill-span">
+              <a className="Link" href="eternallymarsh04@gmail.com">
+                <Email />
+              </a>
+            </span>
+
+            <span style={{ border: "solid 0" }} className="skill-span">
+              <a className="Link" href="eternallymarsh04@gmail.com">
+                <Discord />
+              </a>
+            </span>
+          </div>
+        </div>
+
         {/* new section for my About content */}
         <div
           ref={aboutRef}
@@ -235,9 +333,9 @@ function Home() {
             also have strong listening skills and the ability to understand and
             respond effectively to others. I've had experience in collaborating
             with diverse teams and fostering open communication and public
-            speaking engagements. I have a{" "}
-            <b>Bachelor's degree in Computer Science</b> from the{" "}
-            <b>Sai Pali Institute of Technology</b>
+            speaking engagements. I have an{" "}
+            <b>Advanced Diploma in Computer Science</b> from the{" "}
+            <b>Sai Pali Institute of Technology Uganda</b>
           </p>
           <p className="about-me">
             What I'm looking for is to obtain a challenging position where I can
@@ -336,68 +434,60 @@ function Home() {
         >
           <h1>Projects</h1>
           <p style={{ padding: "0 10%", textAlign: "center" }}>
-            The way I keep my skills upto date is by doing stuff, building
+            I keep my skills upto date is by doing stuff, building
             stuff. I get basic ideas like To-do lists and put a little fun in
             it. I also work on random projects on Github repositories and
             instagram reels. Out of all the stuff I've built, here are my top
-            20... feel free to check them out
+            20... feel free to check them out.
           </p>
-          <ul className="project-names">
-            <p>
-              <b>Front-End</b>
-            </p>
-            <li className="project-name">Real Time Chat App</li>
-            <li className="project-name">Music Player</li>
-            <li className="project-name">
-              Single page application (SPA) using Angular
-            </li>
-            <li className="project-name">
-              Movie Library App (PWA with offline mode)
-            </li>
-            <li className="project-name">
-              Custom theme for Contant Management
-            </li>
-            <li className="project-name">Browser extension (Grammarly)</li>
-            <li className="project-name">Blockchain smart contract</li>
-            <li className="project-name">E-commerce shopping site</li>
-            <li className="project-name">
-              Interactive data visualization dashboard using D3.js
-            </li>
-            <li className="project-name">ToDoList WebApp... obviously</li>
-            <p>
-              <b>Front-End</b>
-            </p>
-            <li className="project-name">
-              A RESTful API for a social media application
-            </li>
-            <li className="project-name">
-              An authentication service with OAuth integration
-            </li>
-            <li className="project-name">
-              A real-time bidding system for auctions
-            </li>
-            <li className="project-name">
-              A content aggregation service (news feed)
-            </li>
-            <li className="project-name">
-              A microservices architecture-based application
-            </li>
-            <li className="project-name">
-              A cloud-based file storage and sharing service
-            </li>
-            <li className="project-name">
-              A chatbot with natural language processing
-            </li>
-            <li className="project-name">
-              A search engine with a custom algorithm
-            </li>
-            <li className="project-name">
-              An IoT system backend for device management
-            </li>
-            <li className="project-name">
-              A recommendation engine based on user behavior
-            </li>
-          </ul>
+          <p>
+            <b>Front-End</b>
+          </p>
+          <div
+            style={{
+              width: "90%",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+            }}
+          >
+            {FrontEndProjects.map((project, index) => (
+              <div
+                className="project-name"
+                style={{ backgroundColor: "aliceblue", margin: "5px" }}
+              >
+                <p style={{ padding: "0 10px" }} key={index}>
+                  {project}
+                </p>
+              </div>
+            ))}
+          </div>
+          <br />
+          <br />
+          <p>
+            <b>Back-End</b>
+          </p>
+          <div
+            style={{
+              width: "90%",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+            }}
+          >
+            {BackEndProjects.map((project, index) => (
+              <div
+                className="project-name"
+                style={{ backgroundColor: "aliceblue", margin: "5px" }}
+              >
+                <p style={{ padding: "0 10px" }} key={index}>
+                  {project}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* new section for more about me */}
@@ -545,63 +635,6 @@ function Home() {
           </p>
         </div>
 
-        {/* links to my social media */}
-        <div style={{ height: "30vh" }}>
-          <p style={{ padding: "0 10%", textAlign: "center" }}>
-            Check me out...
-          </p>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              width: "100%",
-              justifyContent: "center",
-            }}
-          >
-            <span className="skill-span">
-              <a
-                className="Link"
-                href="https://open.spotify.com/user/sgw331agtxe12j35fd5jrjfwb?si=lraPTE8-RJiXJ5EnHntdbA"
-              >
-                <Spotify />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a className="Link" href="https://github.com/forevermarsh">
-                <Github />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a
-                className="Link"
-                href="https://x.com/eternallyMarsh?t=xcnqLKgEzIopgvV4e59AnA&s=09"
-              >
-                <TwitterX />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a className="Link" href="https://instagram.com/forever.marsh">
-                <Instagram />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a className="Link" href="eternallymarsh04@gmail.com">
-                <Email />
-              </a>
-            </span>
-
-            <span className="skill-span">
-              <a className="Link" href="eternallymarsh04@gmail.com">
-                <Discord />
-              </a>
-            </span>
-          </div>
-        </div>
-
         {/* new section for my blog content */}
         <div
           ref={blogRef}
@@ -620,6 +653,8 @@ function Home() {
             programming tips
           </p>
         </div>
+
+        {/* opning navigation icon */}
         <span
           onClick={openNav}
           style={{
@@ -639,6 +674,7 @@ function Home() {
         </span>
       </div>
 
+      {/* navigation panel */}
       <div
         className="navigation-panel"
         style={{ display: isOpen ? "initial" : "none" }}
