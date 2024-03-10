@@ -6,6 +6,7 @@ import {
   Github,
   Java,
   Javascript,
+  Menu,
   Python,
   ReactJs,
   Spotify,
@@ -33,15 +34,6 @@ function App() {
   return (
     <div
       className="main-page"
-      style={{
-        width: "100%",
-        backgroundColor: "#112240",
-        color: "#fff",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "start",
-        justifyContent: "center",
-      }}
     >
       <div className="top-bar">
         <div className="link-to-section-container">
@@ -75,20 +67,14 @@ function App() {
             <Spotify />
           </div>
         </div>
+        <div id="menu-icon" className="social-icon">
+          <Menu />
+        </div>
       </div>
 
       <div
+        className="home"
         ref={homeRef}
-        style={{
-          width: "100%",
-          backgroundColor: "#112240",
-          color: "#fff",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          marginTop: "4rem",
-        }}
       >
         <div className="intro">
           <div>
@@ -143,48 +129,48 @@ function App() {
           <div className="stack-wrapper">
             <div className="tech-stack">
               <div className="bullet">
-              <Bullet />
-              <p className="stack-name">Javascript Es6+</p>
-</div>
+                <Bullet />
+                <p className="stack-name">Javascript Es6+</p>
+              </div>
               <Javascript />
             </div>
             <div className="tech-stack">
               <div className="bullet">
-              <Bullet />
-              <p className="stack-name">React js</p>
-</div>
+                <Bullet />
+                <p className="stack-name">React js</p>
+              </div>
               <ReactJs />
             </div>
           </div>
           <div className="stack-wrapper">
             <div className="tech-stack">
               <div className="bullet">
-              <Bullet />
-              <p className="stack-name">Java</p>
-</div>
+                <Bullet />
+                <p className="stack-name">Java</p>
+              </div>
               <Java />
             </div>
             <div className="tech-stack">
               <div className="bullet">
-              <Bullet />
-              <p className="stack-name">Python</p>
-</div>
+                <Bullet />
+                <p className="stack-name">Python</p>
+              </div>
               <Python />
             </div>
           </div>
           <div className="stack-wrapper">
             <div className="tech-stack">
               <div className="bullet">
-              <Bullet />
-              <p className="stack-name">Tailwind Css</p>
-</div>
+                <Bullet />
+                <p className="stack-name">Tailwind Css</p>
+              </div>
               <TailwindCss />
             </div>
             <div className="tech-stack">
               <div className="bullet">
-              <Bullet />
-              <p className="stack-name">C++</p>
-</div>
+                <Bullet />
+                <p className="stack-name">C++</p>
+              </div>
               <CPlusPlus />
             </div>
           </div>
