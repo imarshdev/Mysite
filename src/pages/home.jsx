@@ -1,5 +1,5 @@
 // this i sthe main page and evidently the only page
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import clickSound from "../click_sound.mp3";
 import "../index.css";
@@ -32,14 +32,8 @@ import {
 
 // main component "home"
 function Home() {
-  // not entirely usefull but whatever
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
   // opening and closing navigation panel
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
 
   // opening navbar
   const openNav = () => {
@@ -54,32 +48,6 @@ function Home() {
   function play() {
     new Audio(clickSound).play();
   }
-
-  const FrontEndProjects = [
-    "Real Time Chat App",
-    "Music Player",
-    "Single page application (SPA) using Angular",
-    "Movie Library App (PWA with offline mode)",
-    "Custom theme for Contant Management",
-    "Browser extension (Grammarly)",
-    "Blockchain smart contract",
-    "E-commerce shopping site",
-    "Interactive data visualization dashboard using D3.js",
-    "ToDoList WebApp... obviously",
-  ];
-
-  const BackEndProjects = [
-    "A RESTful API for a social media application",
-    "An authentication service with OAuth integration",
-    "A real - time bidding system for Authenticator Assertion Response",
-    "A content aggregation service(news feed)",
-    "A microservices architecture-based application",
-    "A cloud-based file storage and sharing service",
-    "A chatbot with natural language processing",
-    "A search engine with a custom algorithm",
-    "An IoT system backend for device management",
-    "A recommendation engine based on user behavior",
-  ];
 
   const all = () => {
     play();
@@ -105,135 +73,121 @@ function Home() {
           justifyContent: "space-around",
           alignItems: "center",
           width: "100%",
-          backgroundColor: "#fff",
+          backgroundColor: "#112240",
+          color: "#fff",
         }}
       >
-        {/* the topper with my name */}
+        {/* this are links to sections */}
         <div
           style={{
             width: "100%",
+            height: "4rem",
+            backgroundColor: "#112240",
             display: "flex",
-            flex: "row",
             alignItems: "center",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
+            position: "fixed",
+            top: 0,
+            left: 0,
+            zIndex: 9999999999,
           }}
         >
-          <h1
-            style={{ fontWeight: "bolder", color: "#152b42", fontSize: "3rem" }}
+          <div
+            ref={topRef}
+            className="light"
+            style={{
+              width: "50%",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "space-around",
+              alignItems: "start",
+              padding: "20px",
+            }}
           >
-            <em>marsh</em>
-          </h1>
+            <div style={{ width: "10rem", margin: "10px" }}>
+              <Link onClick={() => scrollToDiv(aboutRef)}>
+                <button
+                  className="main-buttons"
+                  style={{
+                    textAlign: "end",
+                  }}
+                >
+                  <em style={{ fontSize: "16px" }}>About 🕊️</em>
+                </button>
+              </Link>
+            </div>
+
+            <div style={{ width: "10rem", margin: "10px" }}>
+              <Link
+                onClick={() => scrollToDiv(projectsRef)}
+                className="main-link"
+              >
+                <button
+                  className="main-buttons"
+                  style={{
+                    textAlign: "end",
+                  }}
+                >
+                  <em style={{ fontSize: "16px" }}>Projects 🛠</em>
+                </button>
+              </Link>
+            </div>
+
+            <div style={{ width: "10rem", margin: "10px" }}>
+              <Link onClick={() => scrollToDiv(meRef)} className="main-link">
+                <button
+                  className="main-buttons"
+                  style={{
+                    textAlign: "end",
+                  }}
+                >
+                  <em style={{ fontSize: "16px" }}>Me 🥷🏾</em>
+                </button>
+              </Link>
+            </div>
+
+            <div style={{ width: "10rem", margin: "10px" }}>
+              <Link onClick={() => scrollToDiv(blogRef)} className="main-link">
+                <button
+                  className="main-buttons"
+                  style={{
+                    textAlign: "end",
+                  }}
+                >
+                  <em style={{ fontSize: "16px" }}>Blog 📚</em>
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div
+            style={{
+              width: "15rem",
+              display: "flex",
+              flex: "row",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
+          >
+            <h1
+              style={{
+                fontWeight: "bolder",
+                color: "#152b42",
+                fontSize: "3rem",
+              }}
+            >
+              <em>marsh</em>
+            </h1>
+          </div>
         </div>
 
         {/* topper with description */}
         <div className="topper">
-          <div
-            style={{
-              width: "15rem",
-              height: "15rem",
-              background: "linear-gradient(45deg, #fff, #fff, #c9d0db)",
-              borderRadius: "50%",
-            }}
-          >
-            <div
-              className="booo"
-              style={{
-                width: "15rem",
-                height: "15rem",
-              }}
-            ></div>
-          </div>
           <div style={{ width: "85%" }}>
             <h4 style={{ padding: "20px" }}>Full-Stack Dev. </h4>
             <p style={{ padding: "0 20px" }}>
               I'm Marsh🍃, I build anything and everything <br />
             </p>
-          </div>
-        </div>
-
-        {/* this are links to sections */}
-        <div
-          ref={topRef}
-          className="light"
-          style={{
-            width: "90%",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-            alignItems: "start",
-            padding: "20px",
-          }}
-        >
-          <div className="link-div">
-            <Link onClick={() => scrollToDiv(aboutRef)} className="main-link">
-              <button
-                className="main-buttons"
-                style={{
-                  textAlign: "end",
-                }}
-              >
-                <em style={{ fontSize: "20px" }}>About 🕊️</em>
-                <p style={{ fontSize: "14px" }}>
-                  My background, skills, and experience as a front-end
-                  developer.
-                </p>
-              </button>
-            </Link>
-          </div>
-
-          <div className="link-div">
-            <Link
-              onClick={() => scrollToDiv(projectsRef)}
-              className="main-link"
-            >
-              <button
-                className="main-buttons"
-                style={{
-                  textAlign: "end",
-                }}
-              >
-                <em style={{ fontSize: "20px" }}>Projects 🛠</em>
-                <p style={{ fontSize: "14px" }}>
-                  Projects with descriptions, screenshots, and links to GitHub
-                  repositories.
-                </p>
-              </button>
-            </Link>
-          </div>
-
-          <div className="link-div">
-            <Link onClick={() => scrollToDiv(meRef)} className="main-link">
-              <button
-                className="main-buttons"
-                style={{
-                  textAlign: "end",
-                }}
-              >
-                <em style={{ fontSize: "20px" }}>Me 🥷🏾</em>
-                <p style={{ fontSize: "14px" }}>
-                  What I love, from music and movies to the books I read and
-                  stuff
-                </p>
-              </button>
-            </Link>
-          </div>
-
-          <div className="link-div">
-            <Link onClick={() => scrollToDiv(blogRef)} className="main-link">
-              <button
-                className="main-buttons"
-                style={{
-                  textAlign: "end",
-                }}
-              >
-                <em style={{ fontSize: "20px" }}>Blog 📚</em>
-                <p style={{ fontSize: "14px" }}>
-                  Posts, articles, notes and PDF books related to front-end
-                  development,
-                </p>
-              </button>
-            </Link>
           </div>
         </div>
 
@@ -313,7 +267,6 @@ function Home() {
 
         {/* new section for my About content */}
         <div
-          ref={aboutRef}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -323,7 +276,6 @@ function Home() {
             textAlign: "start",
           }}
         >
-          <h1 style={{ padding: "0 5%" }}>About Me</h1>
           <p className="about-me">
             I'm Chelangat Marsh Mansur, 21 and a full-stack developer. I create
             dynamic and user-friendly software. Specializing mainly in React.js.{" "}
@@ -434,60 +386,12 @@ function Home() {
         >
           <h1>Projects</h1>
           <p style={{ padding: "0 10%", textAlign: "center" }}>
-            I keep my skills upto date is by doing stuff, building
-            stuff. I get basic ideas like To-do lists and put a little fun in
-            it. I also work on random projects on Github repositories and
-            instagram reels. Out of all the stuff I've built, here are my top
-            20... feel free to check them out.
+            I keep my skills upto date is by doing stuff, building stuff. I get
+            basic ideas like To-do lists and put a little fun in it. I also work
+            on random projects on Github repositories and instagram reels. Out
+            of all the stuff I've built, here are my top 20... feel free to
+            check them out.
           </p>
-          <p>
-            <b>Front-End</b>
-          </p>
-          <div
-            style={{
-              width: "90%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-            }}
-          >
-            {FrontEndProjects.map((project, index) => (
-              <div
-                className="project-name"
-                style={{ backgroundColor: "aliceblue", margin: "5px" }}
-              >
-                <p style={{ padding: "0 10px" }} key={index}>
-                  {project}
-                </p>
-              </div>
-            ))}
-          </div>
-          <br />
-          <br />
-          <p>
-            <b>Back-End</b>
-          </p>
-          <div
-            style={{
-              width: "90%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-            }}
-          >
-            {BackEndProjects.map((project, index) => (
-              <div
-                className="project-name"
-                style={{ backgroundColor: "aliceblue", margin: "5px" }}
-              >
-                <p style={{ padding: "0 10px" }} key={index}>
-                  {project}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* new section for more about me */}
@@ -787,3 +691,5 @@ function Home() {
 }
 
 export default Home;
+
+

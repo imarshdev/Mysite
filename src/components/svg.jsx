@@ -90,7 +90,7 @@ export function Discord() {
       viewBox="0 0 24 24"
     >
       <path
-        fill="#07293f"
+        fill="#fff"
         d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1a14.66 14.66 0 0 0-4.58 0a10.14 10.14 0 0 0-.53-1.1a16 16 0 0 0-4.13 1.3a17.33 17.33 0 0 0-3 11.59a16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83a3.39 3.39 0 0 0 .42-.33a11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84a12.41 12.41 0 0 0 1.08 1.78a16.44 16.44 0 0 0 5.06-2.59a17.22 17.22 0 0 0-3-11.59a16.09 16.09 0 0 0-4.09-1.35M8.68 14.81a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.93 1.93 0 0 1 1.8 2a1.93 1.93 0 0 1-1.8 2m6.64 0a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.92 1.92 0 0 1 1.8 2a1.92 1.92 0 0 1-1.8 2"
       ></path>
     </svg>
@@ -106,7 +106,7 @@ export function Github() {
       viewBox="0 0 24 24"
     >
       <path
-        fill="black"
+        fill="#fff"
         fillRule="evenodd"
         d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974c0 4.406 2.857 8.145 6.821 9.465c.499.09.679-.217.679-.481c0-.237-.008-.865-.011-1.696c-2.775.602-3.361-1.338-3.361-1.338c-.452-1.152-1.107-1.459-1.107-1.459c-.905-.619.069-.605.069-.605c1.002.07 1.527 1.028 1.527 1.028c.89 1.524 2.336 1.084 2.902.829c.091-.645.351-1.085.635-1.334c-2.214-.251-4.542-1.107-4.542-4.93c0-1.087.389-1.979 1.024-2.675c-.101-.253-.446-1.268.099-2.64c0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336a9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021c.545 1.372.203 2.387.099 2.64c.64.696 1.024 1.587 1.024 2.675c0 3.833-2.33 4.675-4.552 4.922c.355.308.675.916.675 1.846c0 1.334-.012 2.41-.012 2.737c0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974C22 6.465 17.535 2 12.026 2"
         clipRule="evenodd"
@@ -458,22 +458,21 @@ export function TwitterX() {
       viewBox="0 0 16 16"
     >
       <path
-        fill="black"
+        fill="#fff"
         d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z"
       ></path>
     </svg>
   );
 }
-
-export function Email() {
+export function Email2() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1.5em"
-      height="1.5em"
+      width="3em"
+      height="3em"
       viewBox="0 0 24 24"
     >
-      <path fill="black" fillOpacity={0} d="M12 11L4 6H20L12 11Z">
+      <path fill="#fff" fillOpacity={0} d="M12 11L4 6H20L12 11Z">
         <animate
           fill="freeze"
           attributeName="fill-opacity"
@@ -482,7 +481,58 @@ export function Email() {
           values="0;0.3"
         ></animate>
       </path>
-      <g fill="none" stroke="black" strokeLinecap="round" strokeWidth={2}>
+      <g fill="none" stroke="#fff" strokeLinecap="round" strokeWidth={2}>
+        <rect
+          width={18}
+          height={14}
+          x={3}
+          y={5}
+          strokeDasharray={64}
+          strokeDashoffset={64}
+          rx={1}
+        >
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            dur="0.6s"
+            values="64;0"
+          ></animate>
+        </rect>
+        <path
+          strokeDasharray={24}
+          strokeDashoffset={24}
+          d="M3 6.5L12 12L21 6.5"
+        >
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="0.6s"
+            dur="0.4s"
+            values="24;0"
+          ></animate>
+        </path>
+      </g>
+    </svg>
+  );
+}
+export function Email() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1.5em"
+      height="1.5em"
+      viewBox="0 0 24 24"
+    >
+      <path fill="#fff" fillOpacity={0} d="M12 11L4 6H20L12 11Z">
+        <animate
+          fill="freeze"
+          attributeName="fill-opacity"
+          begin="1s"
+          dur="0.15s"
+          values="0;0.3"
+        ></animate>
+      </path>
+      <g fill="none" stroke="#fff" strokeLinecap="round" strokeWidth={2}>
         <rect
           width={18}
           height={14}
@@ -662,6 +712,117 @@ export function ArrowUpCircle() {
           </path>
         </g>
       </g>
+    </svg>
+  );
+}
+
+export function Coffe() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        fillOpacity={0}
+        d="M17 14V17a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V14z"
+      >
+        <animate
+          fill="freeze"
+          attributeName="fill-opacity"
+          begin="0.8s"
+          dur="0.15s"
+          values="0;0.3"
+        ></animate>
+      </path>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      >
+        <path
+          strokeDasharray={48}
+          strokeDashoffset={48}
+          d="M17 9v9a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V9z"
+        >
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            dur="0.6s"
+            values="48;0"
+          ></animate>
+        </path>
+        <path
+          strokeDasharray={14}
+          strokeDashoffset={14}
+          d="M17 14H20C20.55 14 21 13.55 21 13V10C21 9.45 20.55 9 20 9H17"
+        >
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="0.6s"
+            dur="0.2s"
+            values="14;28"
+          ></animate>
+        </path>
+      </g>
+      <mask id="lineMdCoffeeHalfEmptyTwotoneLoop0">
+        <path
+          fill="none"
+          stroke="#fff"
+          strokeWidth={2}
+          d="M8 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M12 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M16 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4"
+        >
+          <animateMotion
+            calcMode="linear"
+            dur="3s"
+            path="M0 0v-8"
+            repeatCount="indefinite"
+          ></animateMotion>
+        </path>
+      </mask>
+      <rect
+        width={24}
+        height={0}
+        y={7}
+        fill="currentColor"
+        mask="url(#lineMdCoffeeHalfEmptyTwotoneLoop0)"
+      >
+        <animate
+          fill="freeze"
+          attributeName="y"
+          begin="0.8s"
+          dur="0.6s"
+          values="7;2"
+        ></animate>
+        <animate
+          fill="freeze"
+          attributeName="height"
+          begin="0.8s"
+          dur="0.6s"
+          values="0;5"
+        ></animate>
+      </rect>
+    </svg>
+  );
+}
+
+export function Bullet() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 512 512"
+    >
+      <path
+        fill="#64ffda"
+        d="M45.57 105c-.82 1.1-2.24 3.8-3.56 7.7c-2.64 7.7-5.13 19.8-7.09 34.5C31.01 176.5 29 216.3 29 256s2.01 79.5 5.92 108.8c1.96 14.7 4.45 26.8 7.09 34.5c1.32 3.9 2.74 6.6 3.56 7.7h73.93c1.8-2.9 4-7.7 6-14H108c-5 0-9.4-2.7-12.21-5.7c-2.84-3.1-4.81-6.7-6.56-10.8c-3.51-8.1-6.04-18.6-8.11-31C76.99 320.7 75 288.4 75 256s1.99-64.7 6.12-89.5c2.07-12.4 4.6-22.9 8.11-31c1.75-4.1 3.72-7.7 6.56-10.8c2.81-3 7.21-5.7 12.21-5.7h17.5c-2-6.3-4.2-11.1-6-14zM172 105c-.5 0-1 0-2.4 1.3c-1.5 1.3-3.4 3.8-5.3 7.6c-3.9 7.4-7.6 19.3-10.5 33.9c-5.8 29-8.8 68.6-8.8 108.2c0 39.5 3 79.2 8.8 108.2c2.9 14.6 6.6 26.5 10.5 33.9c1.9 3.8 3.8 6.3 5.3 7.6c1.4 1.3 1.9 1.3 2.4 1.3c45.9 0 86.9-4 123-10.9c-13.4-11.7-24.5-25.1-33-38.1c-6.1-9.4-10.9-18.4-14.1-26.5c-3.2-8-5.2-14.7-4.5-21.6c1.8-29.9 14.9-52.9 29.9-66.6c7.6-6.9 15.7-11.6 23.8-13.6c2-.5 4.1-.8 6.2-.9c6.3-.3 12.7 1.5 17.3 6.3c.5.4.7.9 1 1.5c29.9 48 63.3 85.8 112.2 103.1c33.1-25.5 49.2-55.1 49.2-83.7c0-35.8-25.2-73.1-77.4-102.1S274.8 105 172 105m-63 32c-.7.7-2 2.6-3.2 5.5c-2.5 5.9-5 15.4-6.9 27c-3.89 23.2-5.9 54.9-5.9 86.5s2.01 63.3 5.9 86.5c1.9 11.6 4.4 21.1 6.9 27c1.2 2.9 2.5 4.8 3.2 5.5h28.8c-.6-2.3-1.1-4.7-1.6-7.2c-6.2-31-9.2-71.4-9.2-111.8c0-40.5 3-80.8 9.2-111.8c.5-2.5 1-4.9 1.6-7.2zm253.9 25.6l72.8 68.6l-6.2 6.6c-22.1 23.5-52.5 22.2-70.3 6.1c-17.8-16-22.9-46.4-2.4-73.3zm2.9 27.4c-9 17.3-4.1 31.9 5.5 40.6c9.6 8.7 23.9 11.7 38.4.8l-6.7-6.3c-9 2.9-18.1 1.5-23.8-4.3c-4.7-4.9-3.2-11.9-1.3-19.4zm-73.1 61.1c-2.3 1.5-4.8 3.3-7.2 5.5c-11.6 10.6-22.7 29.3-24.1 54.6v.2l-.1.3v.2l32.3-4.2zm18 1.7l.8 51.5l34.8-4c-13-14.4-24.6-30.4-35.6-47.5m53 65l.9 33.1l7.8-.8v.1l30.5-4.4c-14.4-7.7-27.3-17.2-39.2-28m-18 .7l-33 3.8l-10 34.5l44-4.2zm-52.8 7.4l-26.3 3.5c2.6 5.6 6.1 12.1 10.4 18.7c2.1 3.1 4.3 6.3 6.7 9.5zm97.9 39.8l-28.6 4.2l-4.9 9.6c12-4.2 23.2-8.9 33.5-13.8m-49.4 5.4l-42.4 4.1c5.8 5.8 12.1 11.2 18.8 15.9c5.3-1.3 10.4-2.6 15.4-4z"
+      ></path>
     </svg>
   );
 }
