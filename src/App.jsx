@@ -12,6 +12,7 @@ import {
   TailwindCss,
   TwitterX,
 } from "./components/svg";
+import gif from './assets/giphy.gif'
 import { useRef } from "react";
 
 // hi, this is my personnal site in react
@@ -85,11 +86,14 @@ function App() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "start",
+          justifyContent: "center",
           marginTop: "4rem",
         }}
       >
-        <div>
+        <div className="intro">
+          <div>
+            <img className="gif-image" src={gif} alt="myGif" />
+          </div>
           <h1>
             Sup! I'm <span>Marsh...</span>🍃
           </h1>

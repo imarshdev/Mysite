@@ -90,6 +90,14 @@ p {
 span {
   color: #64ffda;
 }
+.intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gif-image{
+  width: 20rem;
+}
 .typist-container {
   display: inline-block;
 }
@@ -196,5 +204,8 @@ span {
   }
   .stack-container{
       justify-content: center;
+  }
+  p {
+    font-size: 1rem;
   }
 }
