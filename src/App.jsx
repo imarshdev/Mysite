@@ -176,16 +176,14 @@ function App() {
           </div>
         </div>
         <p className="full-bio">
-          When I'm not coding, 'which is not often', I like to read books,
-          expecially Greek mythology fantasies. I also workout... psych!!.
-          Weekends for me are movie-time so I go to the movies with friends and
+          When I'm not coding, 'which is not often', I like to read books and workout...
+          Weekends are movie-time so I go to the movies with friends and
           sometimes, most times alone.
         </p>
         <p className="full-bio">
           I genuinely can't say what my favourite song is, I have one or two for
           every specific mood of the time, But when i think{" "}
-          <b>"favourite + artist,"</b> I think <b>Ruth B</b> I listen to the
-          Safe Heaven Album atleast five times a day.
+          <b>"favourite + artist,"</b> I think <b>Ruth B</b>
         </p>
         <h1 ref={projectsRef} className="about-me-head">
           / Projects<div className="line"></div>
