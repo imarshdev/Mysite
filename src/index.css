@@ -235,6 +235,9 @@ span {
     width: 30%;
     justify-content: end;
   }
+  .social-icon{
+    width: 20%;
+  }
   #menu-icon {
     display: initial;
     width: 10%;
