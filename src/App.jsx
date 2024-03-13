@@ -13,14 +13,51 @@ import {
   TailwindCss,
   TwitterX,
 } from "./components/svg";
-import gif from './assets/giphy.gif'
-import { useRef } from "react";
+import FadeInView from "./components/fadein";
+import gif from "./assets/giphy.gif";
+import gif2 from "./assets/giphy2.gif";
+import { useRef, useState } from "react";
 
 // hi, this is my personnal site in react
 function App() {
+  // navigation
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
+
+  // projects
+  const projects = [
+    {
+      title: "Recipe App",
+      description: "A dynamic recipe app with an ingredient search feature",
+      gifUri: gif2,
+    },
+    {
+      title: "Chat App",
+      description: "A real-time chat application using WebSocket",
+      gifUri: gif2,
+    },
+    {
+      title: "Browser Extension",
+      description: "A browser extension for productivity or utility",
+      gifUri: gif2,
+    },
+    {
+      title: "Dash",
+      description: "An interactive data visualization dashboard using D3.js",
+      gifUri: gif2,
+    },
+    {
+      title: "SmartContract",
+      description: "A front-end for a blockchain smart contract",
+      gifUri: gif2,
+    },
+    {
+      title: "Carts",
+      description: "An e-commerce website with shopping cart functionality",
+      gifUri: gif2,
+    },
+  ];
 
   const scrollToDiv = (ref) => {
     const offsetTop = ref.current.offsetTop - 80;
@@ -32,9 +69,7 @@ function App() {
   };
 
   return (
-    <div
-      className="main-page"
-    >
+    <div className="main-page">
       <div className="top-bar">
         <div className="link-to-section-container">
           <div onClick={() => scrollToDiv(homeRef)} className="link-to-section">
@@ -51,6 +86,12 @@ function App() {
             className="link-to-section"
           >
             <p>Projects</p>
+          </div>
+          <div
+            onClick={() => scrollToDiv(projectsRef)}
+            className="link-to-section"
+          >
+            <p>Blog </p>
           </div>
         </div>
         <div className="links-to-socials">
@@ -72,10 +113,7 @@ function App() {
         </div>
       </div>
 
-      <div
-        className="home"
-        ref={homeRef}
-      >
+      <div className="home" ref={homeRef}>
         <div className="intro">
           <div>
             <img className="gif-image" src={gif} alt="myGif" />
@@ -127,68 +165,100 @@ function App() {
         </p>
         <div className="stack-container">
           <div className="stack-wrapper">
-            <div className="tech-stack">
-              <div className="bullet">
-                <Bullet />
-                <p className="stack-name">Javascript Es6+</p>
+            <FadeInView>
+              <div className="tech-stack">
+                <div className="bullet">
+                  <Bullet />
+                  <p className="stack-name">Javascript Es6+</p>
+                </div>
+                <Javascript />
               </div>
-              <Javascript />
-            </div>
-            <div className="tech-stack">
-              <div className="bullet">
-                <Bullet />
-                <p className="stack-name">React js</p>
+            </FadeInView>
+            <FadeInView>
+              <div className="tech-stack">
+                <div className="bullet">
+                  <Bullet />
+                  <p className="stack-name">React js</p>
+                </div>
+                <ReactJs />
               </div>
-              <ReactJs />
-            </div>
+            </FadeInView>
           </div>
           <div className="stack-wrapper">
-            <div className="tech-stack">
-              <div className="bullet">
-                <Bullet />
-                <p className="stack-name">Java</p>
+            <FadeInView>
+              <div className="tech-stack">
+                <div className="bullet">
+                  <Bullet />
+                  <p className="stack-name">Java</p>
+                </div>
+                <Java />
               </div>
-              <Java />
-            </div>
-            <div className="tech-stack">
-              <div className="bullet">
-                <Bullet />
-                <p className="stack-name">Python</p>
+            </FadeInView>
+            <FadeInView>
+              <div className="tech-stack">
+                <div className="bullet">
+                  <Bullet />
+                  <p className="stack-name">Python</p>
+                </div>
+                <Python />
               </div>
-              <Python />
-            </div>
+            </FadeInView>
           </div>
           <div className="stack-wrapper">
-            <div className="tech-stack">
-              <div className="bullet">
-                <Bullet />
-                <p className="stack-name">Tailwind Css</p>
+            <FadeInView>
+              <div className="tech-stack">
+                <div className="bullet">
+                  <Bullet />
+                  <p className="stack-name">Tailwind Css</p>
+                </div>
+                <TailwindCss />
               </div>
-              <TailwindCss />
-            </div>
-            <div className="tech-stack">
-              <div className="bullet">
-                <Bullet />
-                <p className="stack-name">C++</p>
+            </FadeInView>
+            <FadeInView>
+              <div className="tech-stack">
+                <div className="bullet">
+                  <Bullet />
+                  <p className="stack-name">C++</p>
+                </div>
+                <CPlusPlus />
               </div>
-              <CPlusPlus />
-            </div>
+            </FadeInView>
           </div>
         </div>
         <p className="full-bio">
-          When I'm not coding, 'which is not often', I like to read books and workout...
-          Weekends are movie-time so I go to the movies with friends and
-          sometimes, most times alone.
+          When I'm not coding, 'which is not often', I like to read books and
+          workout... Weekends are movie-time so I go to the movies with friends
+          and sometimes, most times alone.
         </p>
         <p className="full-bio">
           I genuinely can't say what my favourite song is, I have one or two for
           every specific mood of the time, But when i think{" "}
           <b>"favourite + artist,"</b> I think <b>Ruth B</b>
         </p>
+        <p className="full-bio">
+          I write alot too, I have a blog where i write anything and everything
+          i think of.... you should check it out
+        </p>
         <h1 ref={projectsRef} className="about-me-head">
           / Projects<div className="line"></div>
         </h1>
-        <div className="projects-container"></div>
+        <div className="projects-container">
+          {projects.map((project, index) => (
+            <FadeInView>
+
+              <div className="project-card" key={index}>
+                <img className="project-gif" src={project.gifUri} />
+                <h4 className="project-content">{project.title}</h4>
+                <p className="project-content">{project.description}</p>
+              </div>
+            </FadeInView>
+          ))}
+        </div>
+        <FadeInView>
+          <button>
+            <p>My Blog . . .</p>
+          </button>
+        </FadeInView>
       </div>
     </div>
   );
