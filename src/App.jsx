@@ -116,9 +116,7 @@ function App() {
           <div onClick={() => scrollToDiv(homeRef)} className="link-to-section">
             <span className="section-name">
               <span className="number">0.1</span>
-              <p className={activeSection === "home" ? "active" : ""}>
-                Home
-              </p>
+              <p className={activeSection === "home" ? "active" : ""}>Home</p>
             </span>
           </div>
           <div
@@ -127,9 +125,7 @@ function App() {
           >
             <span className="section-name">
               <span className="number">0.2</span>
-              <p className={activeSection === "about" ? "active" : ''}>
-                About
-              </p>
+              <p className={activeSection === "about" ? "active" : ""}>About</p>
             </span>
           </div>
           <div
@@ -138,19 +134,16 @@ function App() {
           >
             <span className="section-name">
               <span className="number">0.3</span>
-              <p className={activeSection === "projects" ? "active" : ""}>
+              <p className={activeSection === "project" ? "active" : ""}>
                 Projects
               </p>
             </span>
           </div>
-          <div
-            onClick={() => scrollToDiv(blogRef)}
-            className="link-to-section"
-          >
+          <div onClick={() => scrollToDiv(blogRef)} className="link-to-section">
             <span className="section-name">
               <span className="number">0.4</span>
-              <p className={activeSection === "blogRef" ? "active" : ""}>
-                Blog
+              <p className={activeSection === "experience" ? "active" : ""}>
+                Experience
               </p>
             </span>
           </div>
@@ -297,23 +290,24 @@ function App() {
           </p>
         </section>
 
-        <section className="sections" id="projects" ref={projectsRef}>
-          <h1 className="about-me-head">
-            / Projects<div className="line"></div>
-          </h1>
-          <div className="projects-container">
-            {projects.map((project, index) => (
-              <FadeInView>
-                <div className="project-card" key={index}>
-                  <img className="project-gif" src={project.gifUri} />
-                  <h4 className="project-content">{project.title}</h4>
-                  <h5 className="project-content2">{project.description}</h5>
-                </div>
-              </FadeInView>
-            ))}
-          </div>
+        <section className="sections" id="project" ref={projectsRef}></section>
+        <h1 className="about-me-head">
+          / Projects<div className="line"></div>
+        </h1>
+        <div className="projects-container">
+          {projects.map((project, index) => (
+            <FadeInView>
+              <div className="project-card" key={index}>
+                <img className="project-gif" src={project.gifUri} />
+                <h4 className="project-content">{project.title}</h4>
+                <h5 className="project-content2">{project.description}</h5>
+              </div>
+            </FadeInView>
+          ))}
+        </div>
+        <section className="sections" id="experience" ref={blogRef}>
+          <div style={{width: '100%', height: '120vh'}}></div>
         </section>
-
         <FadeInView>
           <div className="credits-part">
             <h4>
