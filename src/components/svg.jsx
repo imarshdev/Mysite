@@ -20,8 +20,8 @@ export function Spotify() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
+      width="1.5em"
+      height="1.5em"
       viewBox="0 0 20 20"
     >
       <path
@@ -101,8 +101,8 @@ export function Github() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
+      width="1.5em"
+      height="1.5em"
       viewBox="0 0 24 24"
     >
       <path
@@ -453,8 +453,8 @@ export function TwitterX() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
+      width="1.5em"
+      height="1.5em"
       viewBox="0 0 16 16"
     >
       <path
@@ -519,8 +519,8 @@ export function Email() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
+      width="1.5em"
+      height="1.5em"
       viewBox="0 0 24 24"
     >
       <path fill="#fff" fillOpacity={0} d="M12 11L4 6H20L12 11Z">

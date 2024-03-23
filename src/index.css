@@ -1,14 +1,17 @@
 @font-face {
   font-family: assasin;
-  src: url(/src/assets/Assassin$.ttf);
+  src: url(/src/assets/3.ttf);
 }
 @font-face {
   font-family: lora;
-  src: url(/src/assets/lora.ttf);
+  src: url(/src/assets/Candarab.ttf);
 }
 @font-face {
   font-family: code;
   src: url(/src/assets/chintzy.ttf);
+}
+.number{
+  font-family: lora;
 }
 body {
   margin: 0;
@@ -62,14 +65,14 @@ body {
 }
 .link-to-section {
   height: 3.5rem;
-  width: 7rem;
+  width: 8.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 .link-to-section:hover {
-  color: pink;
+  color: #64ffda;
   transform: scale(1.1);
 }
 .links-to-socials {
@@ -127,19 +130,20 @@ button:hover {
   justify-content: center;
 }
 .home {
-  width: 100%;
+  width: 80%;
   background-color: #112240;
   color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   margin-top: 5.5rem;
+  padding: 0 10%;
 }
 .intro {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 .gif-image {
   width: 20rem;
@@ -166,8 +170,8 @@ button:hover {
   }
 }
 .quick-bio {
-  padding: 0 15%;
-  text-align: center;
+  padding: 0  10% 0 0;
+  text-align: start;
   font-family: lora;
 }
 .quick-bio b {
@@ -179,10 +183,10 @@ button:hover {
 }
 .dm-me:hover {
   transform: scale(1.1);
-  color: pink;
+  color: #64ffda;
 }
 .quote {
-  width: 80%;
+  width: 100%;
   height: 40dvh;
   display: flex;
   flex-direction: column;
@@ -201,20 +205,18 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   align-self: start;
-  padding: 0 10%;
 }
 .full-bio {
-  padding: 0 10%;
   text-align: start;
   font-family: lora;
   font-weight: lighter;
-  width: 80%;
+  width: 100%;
 }
 .full-bio b {
   color: #64ffda;
 }
 .stack-container {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -243,9 +245,10 @@ button:hover {
 .stack-name {
   margin-left: 10px;
   font-size: 16px;
+  font-family: lora;
 }
 .projects-container{
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction:row;
   flex-wrap: wrap;
@@ -253,19 +256,35 @@ button:hover {
 }
 .project-card{
   width: 23rem;
-  height: 20rem;
+  height: 24rem;
   background-color: #1b3666;
   border-radius: 10px;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 .project-card:hover{
   transform: scale(1.03);
 }
 .project-content{
-  padding: 10px;
+  padding: 0 20px;
+  font-family: code;
+  font-weight: lighter;
+}
+.project-content2{
+  padding: 0 20px;
+  font-family: lora;
 }
 .project-gif{
-  width: 30%;
+  height: 60%;
+  border-radius: 10px 10px 0 0;
+}
+.credits-part{
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 600px) {
@@ -273,25 +292,27 @@ button:hover {
     width: 15rem;
   }
   .top-bar {
-    justify-content: space-between;
+    justify-content: end;
     width: 100%;
   }
   .link-to-section-container {
     display: none;
   }
   .links-to-socials {
-    width: 30%;
+    width: 40%;
     justify-content: end;
   }
   .social-icon {
     width: 20%;
   }
-  #menu-icon {
-    display: initial;
-    width: 10%;
+  .quick-bio{
+    padding: 0;
   }
   .stack-container {
     justify-content: center;
+  }
+  .stack-wrapper{
+    width: 100%;
   }
   p {
     font-size: 1rem;

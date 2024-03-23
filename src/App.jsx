@@ -16,6 +16,12 @@ import {
 import FadeInView from "./components/fadein";
 import gif from "./assets/giphy.gif";
 import gif2 from "./assets/giphy2.gif";
+import emoji from "./assets/emoji.gif";
+import bidding from "./assets/bidding.gif";
+import social from "./assets/social.gif";
+import shop from "./assets/shop.gif";
+import smart from "./assets/smart.gif";
+import garden from "./assets/garden.gif";
 import { useRef, useState } from "react";
 
 // hi, this is my personnal site in react
@@ -28,34 +34,39 @@ function App() {
   // projects
   const projects = [
     {
-      title: "Recipe App",
-      description: "A dynamic recipe app with an ingredient search feature",
-      gifUri: gif2,
+      title: "Chirpy",
+      description:
+        "A social media application built in Vue.js for front-end, Node.js for the back-end, MongoDb and Django Rest Framework.",
+      gifUri: social,
     },
     {
-      title: "Chat App",
-      description: "A real-time chat application using WebSocket",
-      gifUri: gif2,
+      title: "BidWar",
+      description:
+        "A real-time bidding system for online auctions using React for front End, Flask for the backend and MongoDb",
+      gifUri: bidding,
     },
     {
-      title: "Browser Extension",
-      description: "A browser extension for productivity or utility",
-      gifUri: gif2,
+      title: "Browser Extentions",
+      description:
+        "Several browser extensions built for productivity and utility",
+      gifUri: emoji,
     },
     {
-      title: "Dash",
-      description: "An interactive data visualization dashboard using D3.js",
-      gifUri: gif2,
+      title: "GreenThumb Guardian",
+      description:
+        "A smart garden system to monitor soil moisture, light levels, temperature and more to maintain plants. built using Raspberry Pi, Google cloud IoT and Java/Swift",
+      gifUri: garden,
     },
     {
       title: "SmartContract",
-      description: "A front-end for a blockchain smart contract",
-      gifUri: gif2,
+      description:
+        "A blockchain smart contract for Ethereum built using solidity and Truffle to compile, deploy and interract with",
+      gifUri: smart,
     },
     {
       title: "Carts",
       description: "An e-commerce website with shopping cart functionality",
-      gifUri: gif2,
+      gifUri: shop,
     },
   ];
 
@@ -73,25 +84,33 @@ function App() {
       <div className="top-bar">
         <div className="link-to-section-container">
           <div onClick={() => scrollToDiv(homeRef)} className="link-to-section">
-            <p>Home</p>
+            <p>
+              <span className="number">0.1 </span>Home
+            </p>
           </div>
           <div
             onClick={() => scrollToDiv(aboutRef)}
             className="link-to-section"
           >
-            <p>About</p>
+            <p>
+              <span className="number">0.2 </span>About
+            </p>
           </div>
           <div
             onClick={() => scrollToDiv(projectsRef)}
             className="link-to-section"
           >
-            <p>Projects</p>
+            <p>
+              <span className="number">0.3 </span>Projects
+            </p>
           </div>
           <div
             onClick={() => scrollToDiv(projectsRef)}
             className="link-to-section"
           >
-            <p>Blog </p>
+            <p>
+              <span className="number">0.4 </span>Blog{" "}
+            </p>
           </div>
         </div>
         <div className="links-to-socials">
@@ -107,9 +126,6 @@ function App() {
           <div className="social-icon">
             <Spotify />
           </div>
-        </div>
-        <div id="menu-icon" className="social-icon">
-          <Menu />
         </div>
       </div>
 
@@ -168,7 +184,6 @@ function App() {
             <FadeInView>
               <div className="tech-stack">
                 <div className="bullet">
-                  <Bullet />
                   <p className="stack-name">Javascript Es6+</p>
                 </div>
                 <Javascript />
@@ -177,7 +192,6 @@ function App() {
             <FadeInView>
               <div className="tech-stack">
                 <div className="bullet">
-                  <Bullet />
                   <p className="stack-name">React js</p>
                 </div>
                 <ReactJs />
@@ -188,7 +202,6 @@ function App() {
             <FadeInView>
               <div className="tech-stack">
                 <div className="bullet">
-                  <Bullet />
                   <p className="stack-name">Java</p>
                 </div>
                 <Java />
@@ -197,7 +210,6 @@ function App() {
             <FadeInView>
               <div className="tech-stack">
                 <div className="bullet">
-                  <Bullet />
                   <p className="stack-name">Python</p>
                 </div>
                 <Python />
@@ -208,7 +220,6 @@ function App() {
             <FadeInView>
               <div className="tech-stack">
                 <div className="bullet">
-                  <Bullet />
                   <p className="stack-name">Tailwind Css</p>
                 </div>
                 <TailwindCss />
@@ -217,7 +228,6 @@ function App() {
             <FadeInView>
               <div className="tech-stack">
                 <div className="bullet">
-                  <Bullet />
                   <p className="stack-name">C++</p>
                 </div>
                 <CPlusPlus />
@@ -245,19 +255,23 @@ function App() {
         <div className="projects-container">
           {projects.map((project, index) => (
             <FadeInView>
-
               <div className="project-card" key={index}>
                 <img className="project-gif" src={project.gifUri} />
                 <h4 className="project-content">{project.title}</h4>
-                <p className="project-content">{project.description}</p>
+                <h5 className="project-content2">{project.description}</h5>
               </div>
             </FadeInView>
           ))}
         </div>
+
         <FadeInView>
-          <button>
-            <p>My Blog . . .</p>
-          </button>
+          <div className="credits-part">
+            <h4>
+              Built and designed by Marsh <br />
+              All rights not reserved. ©
+            </h4>
+            <h4>HI @gazijarin</h4>
+          </div>
         </FadeInView>
       </div>
     </div>
