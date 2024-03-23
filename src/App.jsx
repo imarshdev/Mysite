@@ -46,12 +46,6 @@ function App() {
       gifUri: bidding,
     },
     {
-      title: "Browser Extentions",
-      description:
-        "Several browser extensions built for productivity and utility",
-      gifUri: emoji,
-    },
-    {
       title: "GreenThumb Guardian",
       description:
         "A smart garden system to monitor soil moisture, light levels, temperature and more to maintain plants. built using Raspberry Pi, Google cloud IoT and Java/Swift",
@@ -62,6 +56,12 @@ function App() {
       description:
         "A blockchain smart contract for Ethereum built using solidity and Truffle to compile, deploy and interract with",
       gifUri: smart,
+    },
+    {
+      title: "Browser Extentions",
+      description:
+        "Several browser extensions built for productivity and utility",
+      gifUri: emoji,
     },
     {
       title: "Carts",
@@ -84,33 +84,34 @@ function App() {
       <div className="top-bar">
         <div className="link-to-section-container">
           <div onClick={() => scrollToDiv(homeRef)} className="link-to-section">
-            <p>
-              <span className="number">0.1 </span>Home
-            </p>
+            <span className="section-name">
+              <span className="number">0.1</span><p>Home</p>
+            </span>
           </div>
           <div
             onClick={() => scrollToDiv(aboutRef)}
             className="link-to-section"
           >
-            <p>
-              <span className="number">0.2 </span>About
-            </p>
+            <span className="section-name">
+              <span className="number">0.2</span>
+              <p>About</p>
+            </span>
           </div>
           <div
             onClick={() => scrollToDiv(projectsRef)}
             className="link-to-section"
           >
-            <p>
-              <span className="number">0.3 </span>Projects
-            </p>
+            <span className="section-name">
+              <span className="number">0.3</span><p>Projects</p>
+            </span>
           </div>
           <div
             onClick={() => scrollToDiv(projectsRef)}
             className="link-to-section"
           >
-            <p>
-              <span className="number">0.4 </span>Blog{" "}
-            </p>
+            <span className="section-name">
+              <span className="number">0.4</span><p>Blog</p>
+            </span>
           </div>
         </div>
         <div className="links-to-socials">
@@ -270,7 +271,7 @@ function App() {
               Built and designed by Marsh <br />
               All rights not reserved. ©
             </h4>
-            <h4>HI @gazijarin</h4>
+            <h4>Hi @gazijarin</h4>
           </div>
         </FadeInView>
       </div>
