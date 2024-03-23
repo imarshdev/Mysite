@@ -25,6 +25,13 @@ body {
   scroll-behavior: smooth;
   background-color: #112240;
 }
+.sections{
+  margin-bottom: 80px;
+}
+.active{
+  color: #64ffda;
+  transform: scale(1.1);
+}
 .fade-in-section{
   opacity: 0;
   transform: translateY(10vh);
@@ -78,6 +85,10 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .link-to-section:hover {
   transform: scale(1.1);
@@ -154,6 +165,7 @@ button:hover {
 }
 .gif-image {
   width: 20rem;
+  border-bottom: solid 3px #64ffda;
 }
 .typist-container {
   display: inline-block;

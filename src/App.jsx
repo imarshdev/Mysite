@@ -14,15 +14,14 @@ import {
   TwitterX,
 } from "./components/svg";
 import FadeInView from "./components/fadein";
-import gif from "./assets/giphy.gif";
-import gif2 from "./assets/giphy2.gif";
+import man from "./assets/man.gif";
 import emoji from "./assets/emoji.gif";
 import bidding from "./assets/bidding.gif";
 import social from "./assets/social.gif";
 import shop from "./assets/shop.gif";
 import smart from "./assets/smart.gif";
 import garden from "./assets/garden.gif";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // hi, this is my personnal site in react
 function App() {
@@ -30,6 +29,9 @@ function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
+  const blogRef = useRef(null);
+  // active navigation
+  const [activeSection, setActiveSection] = useState('')
 
   // projects
   const projects = [
@@ -79,13 +81,44 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        })
+      },
+      { rootMargin: '0px', threshold: 0.6 }
+    );
+
+    if (homeRef.current) {
+      observer.observe(homeRef.current)
+    }
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current)
+    }
+    if (projectsRef.current) {
+      observer.observe(projectsRef.current)
+    }if (blogRef.current) {
+      observer.observe(blogRef.current);
+    }
+    return () => {
+      observer.disconnect()
+    }
+  }, []);
+
   return (
     <div className="main-page">
       <div className="top-bar">
         <div className="link-to-section-container">
           <div onClick={() => scrollToDiv(homeRef)} className="link-to-section">
             <span className="section-name">
-              <span className="number">0.1</span><p>Home</p>
+              <span className="number">0.1</span>
+              <p className={activeSection === "home" ? "active" : ""}>
+                Home
+              </p>
             </span>
           </div>
           <div
@@ -94,7 +127,9 @@ function App() {
           >
             <span className="section-name">
               <span className="number">0.2</span>
-              <p>About</p>
+              <p className={activeSection === "about" ? "active" : ''}>
+                About
+              </p>
             </span>
           </div>
           <div
@@ -102,15 +137,21 @@ function App() {
             className="link-to-section"
           >
             <span className="section-name">
-              <span className="number">0.3</span><p>Projects</p>
+              <span className="number">0.3</span>
+              <p className={activeSection === "projects" ? "active" : ""}>
+                Projects
+              </p>
             </span>
           </div>
           <div
-            onClick={() => scrollToDiv(projectsRef)}
+            onClick={() => scrollToDiv(blogRef)}
             className="link-to-section"
           >
             <span className="section-name">
-              <span className="number">0.4</span><p>Blog</p>
+              <span className="number">0.4</span>
+              <p className={activeSection === "blogRef" ? "active" : ""}>
+                Blog
+              </p>
             </span>
           </div>
         </div>
@@ -130,140 +171,148 @@ function App() {
         </div>
       </div>
 
-      <div className="home" ref={homeRef}>
-        <div className="intro">
-          <div>
-            <img className="gif-image" src={gif} alt="myGif" />
-          </div>
-          <h1>
-            Sup! I'm <span>Marsh...</span>🍃
-          </h1>
-          <div>
-            <div className="typist-container">
-              <p className="typist-text">I build anything and everything</p>
+      <div className="home">
+        <section className="sections" id="home" ref={homeRef}>
+          <div className="intro">
+            <FadeInView>
+              <img className="gif-image" src={man} alt="myGif" />
+            </FadeInView>
+            <h1>
+              Sup! I'm <span>Marsh...</span>🍃
+            </h1>
+            <div>
+              <div className="typist-container">
+                <p className="typist-text">I build anything and everything</p>
+              </div>
             </div>
           </div>
-        </div>
-        <p className="quick-bio">
-          I'm <b>Chelangat Marsh Mansur</b>, a 21 year old a full-stack
-          developer. I create dynamic and user-friendly software. Specializing
-          mainly in React.js. I have an{" "}
-          <b>Advanced Diploma in Computer Science</b> from the{" "}
-          <b>Sai Pali Institute of Technology Uganda</b>
-        </p>
-        <div className="dm-me">
-          <Email2 />
-          <p>say hello...</p>
-        </div>
-        <div className="quote">
-          <div style={{ textAlign: "end" }}>
-            <p className="quote-text">
-              The World is But a Canvas to our Imagination.
-            </p>
-            <p className="quote-name">~Henry David Thoreau</p>
+          <p className="quick-bio">
+            I'm <b>Chelangat Marsh Mansur</b>, a 21 year old a full-stack
+            developer. I create dynamic and user-friendly software. Specializing
+            mainly in React.js. I have an{" "}
+            <b>Advanced Diploma in Computer Science</b> from the{" "}
+            <b>Sai Pali Institute of Technology Uganda</b>
+          </p>
+          <div className="dm-me">
+            <Email2 />
+            <p>say hello...</p>
           </div>
-        </div>
-        <h1 ref={aboutRef} className="about-me-head">
-          / About Me<div className="line"></div>
-        </h1>
-        <p className="full-bio">
-          I am undertaking a part-time Bachelors Degree of Science in Software
-          Engineering at University of Oxford. I've had experience in
-          collaborating with diverse teams and fostering open communication and
-          public speaking engagements.
-        </p>
-        <p className="full-bio">
-          What I'm looking for is to obtain a challenging position where I can
-          utilize my skills and contribute to the overral success of my team or
-          company.
-        </p>
-        <p className="full-bio">
-          As a software engineer, these are some of my majorly used tech-stack
-        </p>
-        <div className="stack-container">
-          <div className="stack-wrapper">
-            <FadeInView>
-              <div className="tech-stack">
-                <div className="bullet">
-                  <p className="stack-name">Javascript Es6+</p>
-                </div>
-                <Javascript />
-              </div>
-            </FadeInView>
-            <FadeInView>
-              <div className="tech-stack">
-                <div className="bullet">
-                  <p className="stack-name">React js</p>
-                </div>
-                <ReactJs />
-              </div>
-            </FadeInView>
+          <div className="quote">
+            <div style={{ textAlign: "end" }}>
+              <p className="quote-text">
+                The World is But a Canvas to our Imagination.
+              </p>
+              <p className="quote-name">~Henry David Thoreau</p>
+            </div>
           </div>
-          <div className="stack-wrapper">
-            <FadeInView>
-              <div className="tech-stack">
-                <div className="bullet">
-                  <p className="stack-name">Java</p>
+        </section>
+
+        <section className="sections" id="about" ref={aboutRef}>
+          <h1 className="about-me-head">
+            / About Me<div className="line"></div>
+          </h1>
+          <p className="full-bio">
+            I am undertaking a part-time Bachelors Degree of Science in Software
+            Engineering at University of Oxford. I've had experience in
+            collaborating with diverse teams and fostering open communication
+            and public speaking engagements.
+          </p>
+          <p className="full-bio">
+            What I'm looking for is to obtain a challenging position where I can
+            utilize my skills and contribute to the overral success of my team
+            or company.
+          </p>
+          <p className="full-bio">
+            As a software engineer, these are some of my majorly used tech-stack
+          </p>
+          <div className="stack-container">
+            <div className="stack-wrapper">
+              <FadeInView>
+                <div className="tech-stack">
+                  <div className="bullet">
+                    <p className="stack-name">Javascript Es6+</p>
+                  </div>
+                  <Javascript />
                 </div>
-                <Java />
-              </div>
-            </FadeInView>
-            <FadeInView>
-              <div className="tech-stack">
-                <div className="bullet">
-                  <p className="stack-name">Python</p>
+              </FadeInView>
+              <FadeInView>
+                <div className="tech-stack">
+                  <div className="bullet">
+                    <p className="stack-name">React js</p>
+                  </div>
+                  <ReactJs />
                 </div>
-                <Python />
-              </div>
-            </FadeInView>
+              </FadeInView>
+            </div>
+            <div className="stack-wrapper">
+              <FadeInView>
+                <div className="tech-stack">
+                  <div className="bullet">
+                    <p className="stack-name">Java</p>
+                  </div>
+                  <Java />
+                </div>
+              </FadeInView>
+              <FadeInView>
+                <div className="tech-stack">
+                  <div className="bullet">
+                    <p className="stack-name">Python</p>
+                  </div>
+                  <Python />
+                </div>
+              </FadeInView>
+            </div>
+            <div className="stack-wrapper">
+              <FadeInView>
+                <div className="tech-stack">
+                  <div className="bullet">
+                    <p className="stack-name">Tailwind Css</p>
+                  </div>
+                  <TailwindCss />
+                </div>
+              </FadeInView>
+              <FadeInView>
+                <div className="tech-stack">
+                  <div className="bullet">
+                    <p className="stack-name">C++</p>
+                  </div>
+                  <CPlusPlus />
+                </div>
+              </FadeInView>
+            </div>
           </div>
-          <div className="stack-wrapper">
-            <FadeInView>
-              <div className="tech-stack">
-                <div className="bullet">
-                  <p className="stack-name">Tailwind Css</p>
+          <p className="full-bio">
+            When I'm not coding, 'which is not often', I like to read books and
+            workout... Weekends are movie-time so I go to the movies with
+            friends and sometimes, most times alone.
+          </p>
+          <p className="full-bio">
+            I genuinely can't say what my favourite song is, I have one or two
+            for every specific mood of the time, But when i think{" "}
+            <b>"favourite + artist,"</b> I think <b>Ruth B</b>
+          </p>
+          <p className="full-bio">
+            I write alot too, I have a blog where i write anything and
+            everything i think of.... you should check it out
+          </p>
+        </section>
+
+        <section className="sections" id="projects" ref={projectsRef}>
+          <h1 className="about-me-head">
+            / Projects<div className="line"></div>
+          </h1>
+          <div className="projects-container">
+            {projects.map((project, index) => (
+              <FadeInView>
+                <div className="project-card" key={index}>
+                  <img className="project-gif" src={project.gifUri} />
+                  <h4 className="project-content">{project.title}</h4>
+                  <h5 className="project-content2">{project.description}</h5>
                 </div>
-                <TailwindCss />
-              </div>
-            </FadeInView>
-            <FadeInView>
-              <div className="tech-stack">
-                <div className="bullet">
-                  <p className="stack-name">C++</p>
-                </div>
-                <CPlusPlus />
-              </div>
-            </FadeInView>
+              </FadeInView>
+            ))}
           </div>
-        </div>
-        <p className="full-bio">
-          When I'm not coding, 'which is not often', I like to read books and
-          workout... Weekends are movie-time so I go to the movies with friends
-          and sometimes, most times alone.
-        </p>
-        <p className="full-bio">
-          I genuinely can't say what my favourite song is, I have one or two for
-          every specific mood of the time, But when i think{" "}
-          <b>"favourite + artist,"</b> I think <b>Ruth B</b>
-        </p>
-        <p className="full-bio">
-          I write alot too, I have a blog where i write anything and everything
-          i think of.... you should check it out
-        </p>
-        <h1 ref={projectsRef} className="about-me-head">
-          / Projects<div className="line"></div>
-        </h1>
-        <div className="projects-container">
-          {projects.map((project, index) => (
-            <FadeInView>
-              <div className="project-card" key={index}>
-                <img className="project-gif" src={project.gifUri} />
-                <h4 className="project-content">{project.title}</h4>
-                <h5 className="project-content2">{project.description}</h5>
-              </div>
-            </FadeInView>
-          ))}
-        </div>
+        </section>
 
         <FadeInView>
           <div className="credits-part">
