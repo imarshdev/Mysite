@@ -1,5 +1,4 @@
 import {
-  Bullet,
   CPlusPlus,
   Email,
   Email2,
@@ -22,8 +21,10 @@ import social from "./assets/social.gif";
 import shop from "./assets/shop.gif";
 import smart from "./assets/smart.gif";
 import garden from "./assets/garden.gif";
+import ReactGA from "react-ga";
 import { useEffect, useRef, useState } from "react";
 
+  
 // hi, this is my personnal site in react
 function App() {
   // navigation
@@ -105,6 +106,13 @@ function App() {
     return () => {
       observer.disconnect();
     };
+  }, []);
+
+
+  const TrackingId = "G-2V842650X9";
+  useEffect(() => {
+    ReactGA.initialize(TrackingId);
+    ReactGA.pageview(window.Location.pathname + window.location.search);
   }, []);
 
   return (
