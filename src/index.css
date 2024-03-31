@@ -199,9 +199,9 @@ button:hover {
 .dm-me {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 .dm-me:hover {
-  transform: scale(1.1);
   color: #64ffda;
 }
 .quote {
@@ -305,7 +305,34 @@ button:hover {
   align-items: start;
   flex-direction: column;
 }
-
+.git-link{
+  width: 30px;
+  height: 30px;
+  background-color: #1b3666;
+  position: absolute;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.git-link:hover{
+  transform: scale(1.1);
+}
+.project-link:hover{
+  transform: scale(1.1);
+}
+.project-link{
+  width: 30px;
+  height: 30px;
+  background-color: #1b3666;
+  position: absolute;
+  border-radius: 10px;
+  margin: 5px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 600px) {
   .gif-image {
     width: 15rem;

@@ -6,6 +6,7 @@ import {
   Github,
   Java,
   Javascript,
+  Link,
   Menu,
   Python,
   ReactJs,
@@ -29,9 +30,8 @@ function App() {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
-  const blogRef = useRef(null);
   // active navigation
-  const [activeSection, setActiveSection] = useState('')
+  const [activeSection, setActiveSection] = useState("");
 
   // projects
   const projects = [
@@ -84,29 +84,27 @@ function App() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
-        })
+        });
       },
-      { rootMargin: '0px', threshold: 0.6 }
+      { rootMargin: "0px", threshold: 0.6 }
     );
 
     if (homeRef.current) {
-      observer.observe(homeRef.current)
+      observer.observe(homeRef.current);
     }
     if (aboutRef.current) {
-      observer.observe(aboutRef.current)
+      observer.observe(aboutRef.current);
     }
     if (projectsRef.current) {
-      observer.observe(projectsRef.current)
-    }if (blogRef.current) {
-      observer.observe(blogRef.current);
+      observer.observe(projectsRef.current);
     }
     return () => {
-      observer.disconnect()
-    }
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -116,7 +114,9 @@ function App() {
           <div onClick={() => scrollToDiv(homeRef)} className="link-to-section">
             <span className="section-name">
               <span className="number">0.1</span>
-              <p className={activeSection === "home" ? "active" : ""}>Home</p>
+              <p className={activeSection === "home" ? "active" : "not-active"}>
+                Home
+              </p>
             </span>
           </div>
           <div
@@ -125,7 +125,11 @@ function App() {
           >
             <span className="section-name">
               <span className="number">0.2</span>
-              <p className={activeSection === "about" ? "active" : ""}>About</p>
+              <p
+                className={activeSection === "about" ? "active" : "not-active"}
+              >
+                About
+              </p>
             </span>
           </div>
           <div
@@ -134,16 +138,12 @@ function App() {
           >
             <span className="section-name">
               <span className="number">0.3</span>
-              <p className={activeSection === "project" ? "active" : ""}>
+              <p
+                className={
+                  activeSection === "project" ? "active" : "not-active"
+                }
+              >
                 Projects
-              </p>
-            </span>
-          </div>
-          <div onClick={() => scrollToDiv(blogRef)} className="link-to-section">
-            <span className="section-name">
-              <span className="number">0.4</span>
-              <p className={activeSection === "experience" ? "active" : ""}>
-                Experience
               </p>
             </span>
           </div>
@@ -170,25 +170,30 @@ function App() {
             <FadeInView>
               <img className="gif-image" src={man} alt="myGif" />
             </FadeInView>
-            <h1>
-              Sup! I'm <span>Marsh...</span>🍃
-            </h1>
+            <div className="typist-container">
+              <h1 className="typist-text">
+                Hey! I'm <span>Marsh...</span>🍃
+              </h1>
+            </div>
             <div>
-              <div className="typist-container">
-                <p className="typist-text">I build anything and everything</p>
+              <div>
+                <p>I build anything and everything</p>
               </div>
             </div>
           </div>
           <p className="quick-bio">
             I'm <b>Chelangat Marsh Mansur</b>, a 21 year old a full-stack
-            developer. I create dynamic and user-friendly software. Specializing
-            mainly in React.js. I have an{" "}
-            <b>Advanced Diploma in Computer Science</b> from the{" "}
-            <b>Sai Pali Institute of Technology Uganda</b>
+            developer. I create dynamic and user-friendly software. I love
+            tackling complex problems and turning them into sleek, effecient
+            applications. I have a proven track record of delivering robust code
+            for high-volume businesses. Eager to bring top-notch applications to
+            life.
           </p>
           <div className="dm-me">
-            <Email2 />
-            <p>say hello...</p>
+            <a href="mailto:forevermarsh004@gmail.com" style={{textDecoration: 'none', color: '#64ffda'}}>
+              <Email2 />
+              <p>say hello...</p>
+            </a>
           </div>
           <div className="quote">
             <div style={{ textAlign: "end" }}>
@@ -205,10 +210,10 @@ function App() {
             / About Me<div className="line"></div>
           </h1>
           <p className="full-bio">
-            I am undertaking a part-time Bachelors Degree of Science in Software
-            Engineering at University of Oxford. I've had experience in
-            collaborating with diverse teams and fostering open communication
-            and public speaking engagements.
+            In progress: Bachelor's Degree of Science in Software Engineering
+            (Graduating: October, 2025) <br />
+            I've had experience in collaborating with diverse teams and
+            fostering open communication and public speaking engagements.
           </p>
           <p className="full-bio">
             What I'm looking for is to obtain a challenging position where I can
@@ -285,8 +290,11 @@ function App() {
             <b>"favourite + artist,"</b> I think <b>Ruth B</b>
           </p>
           <p className="full-bio">
-            I write alot too, I have a blog where i write anything and
-            everything i think of.... you should check it out
+            I write alot too, I have a blog. I write anything and everything i
+            think of....{" "}
+            <a href="blog" style={{ color: "#64ffda", textDecoration: "none" }}>
+              my blog
+            </a>
           </p>
         </section>
 
@@ -298,6 +306,12 @@ function App() {
           {projects.map((project, index) => (
             <FadeInView>
               <div className="project-card" key={index}>
+                <div className="git-link">
+                  <Github />
+                </div>
+                <div className="project-link">
+                  <Link />
+                </div>
                 <img className="project-gif" src={project.gifUri} />
                 <h4 className="project-content">{project.title}</h4>
                 <h5 className="project-content2">{project.description}</h5>
@@ -305,9 +319,6 @@ function App() {
             </FadeInView>
           ))}
         </div>
-        <section className="sections" id="experience" ref={blogRef}>
-          <div style={{width: '100%', height: '120vh'}}></div>
-        </section>
         <FadeInView>
           <div className="credits-part">
             <h4>
