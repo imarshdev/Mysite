@@ -198,7 +198,10 @@ function App() {
             life.
           </p>
           <div className="dm-me">
-            <a href="mailto:forevermarsh004@gmail.com" style={{textDecoration: 'none', color: '#64ffda'}}>
+            <a
+              href="mailto:forevermarsh004@gmail.com"
+              style={{ textDecoration: "none", color: "#a8cd9f" }}
+            >
               <Email2 />
               <p>say hello...</p>
             </a>
@@ -300,7 +303,7 @@ function App() {
           <p className="full-bio">
             I write alot too, I have a blog. I write anything and everything i
             think of....{" "}
-            <a href="blog" style={{ color: "#64ffda", textDecoration: "none" }}>
+            <a href="blog" style={{ color: "#a8cd9f", textDecoration: "none" }}>
               my blog
             </a>
           </p>
@@ -326,6 +329,9 @@ function App() {
               </div>
             </FadeInView>
           ))}
+        </div>
+        <div className="more">
+          <p>More Projects {"> "}</p>
         </div>
         <FadeInView>
           <div className="credits-part">

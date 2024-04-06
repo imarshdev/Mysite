@@ -13,7 +13,7 @@
 .number{
   font-family: lora;
   margin-right: 5px;
-  color: #64ffda;
+  color: #a8cd9f;
 }
 body {
   margin: 0;
@@ -23,13 +23,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
   scroll-behavior: smooth;
-  background-color: #112240;
+  background-color: #003c43;
 }
 .sections{
   margin-top: 80px;
 }
 .active{
-  color: #64ffda;
+  color: #a8cd9f;
   transform: scale(1.1);
 }
 .fade-in-section{
@@ -52,7 +52,7 @@ body {
 .horizontal-line {
   width: 1px;
   height: 5rem;
-  background-color: #64ffda;
+  background-color: #a8cd9f;
 }
 .top-bar {
   width: 100%;
@@ -62,7 +62,7 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: #112240;
+  background-color: #003c43;
   z-index: 999999;
 }
 .link-to-section-container {
@@ -131,8 +131,8 @@ button {
   color: #fff;
   padding: 0 20px;
   border-radius: 20px;
-  background-color: #1b3666;
-  border: solid 0.01px #64ffda;
+  background-color: #135d66;
+  border: solid 0.01px #a8cd9f;
   transition: transform 1s;
 }
 button:hover {
@@ -140,7 +140,7 @@ button:hover {
 }
 .main-page {
   width: 100%;
-  background-color: #112240;
+  background-color: #003c43;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -149,7 +149,7 @@ button:hover {
 }
 .home {
   width: 80%;
-  background-color: #112240;
+  background-color: #003c43;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -165,7 +165,7 @@ button:hover {
 }
 .gif-image {
   width: 20rem;
-  border-bottom: solid 3px #64ffda;
+  border-bottom: solid 3px #a8cd9f;
 }
 .typist-container {
   display: inline-block;
@@ -194,7 +194,7 @@ button:hover {
   font-family: lora;
 }
 .quick-bio b {
-  color: #64ffda;
+  color: #a8cd9f;
 }
 .dm-me {
   display: flex;
@@ -202,7 +202,7 @@ button:hover {
   flex-direction: column;
 }
 .dm-me:hover {
-  color: #64ffda;
+  color: #a8cd9f;
 }
 .quote {
   width: 100%;
@@ -216,7 +216,7 @@ button:hover {
   font-family: lora;
 }
 .quote-name {
-  color: #64ffda;
+  color: #a8cd9f;
 }
 .about-me-head {
   width: 20rem;
@@ -232,7 +232,7 @@ button:hover {
   width: 100%;
 }
 .full-bio b {
-  color: #64ffda;
+  color: #a8cd9f;
 }
 .stack-container {
   width: 100%;
@@ -254,7 +254,7 @@ button:hover {
   text-align: start;
 }
 .tech-stack:hover {
-  color: #64ffda;
+  color: #a8cd9f;
   transform: scale(1.1);
 }
 .bullet {
@@ -274,9 +274,9 @@ button:hover {
     justify-content: space-between;
 }
 .project-card{
-  width: 23rem;
+  width: 21rem;
   height: 24rem;
-  background-color: #1b3666;
+  background-color: #135d66;
   border-radius: 10px;
   margin: 1rem;
   display: flex;
@@ -308,7 +308,7 @@ button:hover {
 .git-link{
   width: 30px;
   height: 30px;
-  background-color: #1b3666;
+  background-color: #135d66;
   position: absolute;
   border-radius: 10px;
   margin: 5px;
@@ -325,13 +325,26 @@ button:hover {
 .project-link{
   width: 30px;
   height: 30px;
-  background-color: #1b3666;
+  background-color: #135d66;
   position: absolute;
   border-radius: 10px;
   margin: 5px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.more{
+  width: 12rem;
+  height: 3rem;
+  align-self: flex-end;
+  background-color: #135d66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 25px 25px 10px;
+}
+.more:hover{
+  transform: scale(1.1);
 }
 @media screen and (max-width: 600px) {
   .gif-image {
