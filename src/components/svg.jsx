@@ -106,7 +106,7 @@ export function Github() {
       viewBox="0 0 24 24"
     >
       <path
-        fill="black"
+        fill="#fff"
         fillRule="evenodd"
         d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974c0 4.406 2.857 8.145 6.821 9.465c.499.09.679-.217.679-.481c0-.237-.008-.865-.011-1.696c-2.775.602-3.361-1.338-3.361-1.338c-.452-1.152-1.107-1.459-1.107-1.459c-.905-.619.069-.605.069-.605c1.002.07 1.527 1.028 1.527 1.028c.89 1.524 2.336 1.084 2.902.829c.091-.645.351-1.085.635-1.334c-2.214-.251-4.542-1.107-4.542-4.93c0-1.087.389-1.979 1.024-2.675c-.101-.253-.446-1.268.099-2.64c0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336a9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021c.545 1.372.203 2.387.099 2.64c.64.696 1.024 1.587 1.024 2.675c0 3.833-2.33 4.675-4.552 4.922c.355.308.675.916.675 1.846c0 1.334-.012 2.41-.012 2.737c0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974C22 6.465 17.535 2 12.026 2"
         clipRule="evenodd"
@@ -458,7 +458,7 @@ export function TwitterX() {
       viewBox="0 0 16 16"
     >
       <path
-        fill="black"
+        fill="#fff"
         d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z"
       ></path>
     </svg>
@@ -472,7 +472,7 @@ export function Email2() {
       height="3em"
       viewBox="0 0 24 24"
     >
-      <path fill="black" fillOpacity={0} d="M12 11L4 6H20L12 11Z">
+      <path fill="#fff" fillOpacity={0} d="M12 11L4 6H20L12 11Z">
         <animate
           fill="freeze"
           attributeName="fill-opacity"
@@ -481,7 +481,7 @@ export function Email2() {
           values="0;0.3"
         ></animate>
       </path>
-      <g fill="none" stroke="black" strokeLinecap="round" strokeWidth={2}>
+      <g fill="none" stroke="#fff" strokeLinecap="round" strokeWidth={2}>
         <rect
           width={18}
           height={14}
@@ -523,7 +523,7 @@ export function Email() {
       height="1.5em"
       viewBox="0 0 24 24"
     >
-      <path fill="black" fillOpacity={0} d="M12 11L4 6H20L12 11Z">
+      <path fill="#fff" fillOpacity={0} d="M12 11L4 6H20L12 11Z">
         <animate
           fill="freeze"
           attributeName="fill-opacity"
@@ -532,7 +532,7 @@ export function Email() {
           values="0;0.3"
         ></animate>
       </path>
-      <g fill="none" stroke="black" strokeLinecap="round" strokeWidth={2}>
+      <g fill="none" stroke="#fff" strokeLinecap="round" strokeWidth={2}>
         <rect
           width={18}
           height={14}
@@ -838,7 +838,7 @@ export function Link() {
       viewBox="0 0 24 24"
     >
       <path
-        fill="white"
+        fill="#fff"
         d="M13.293 3.96a4.771 4.771 0 1 1 6.747 6.747l-3.03 3.03l-1.415-1.413l3.03-3.031a2.771 2.771 0 1 0-3.918-3.92l-3.031 3.031l-1.414-1.414zm2.12 6.04l-5.415 5.414L8.584 14l5.414-5.414zm-7.01 1.676l-3.03 3.031a2.771 2.771 0 1 0 3.92 3.92l3.03-3.031l1.414 1.414l-3.03 3.03a4.771 4.771 0 1 1-6.748-6.747l3.03-3.03z"
       ></path>
     </svg>
