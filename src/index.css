@@ -13,7 +13,7 @@
 .number{
   font-family: lora;
   margin-right: 5px;
-  color: #a8cd9f;
+  color: black;
 }
 body {
   margin: 0;
@@ -23,7 +23,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   scroll-behavior: smooth;
-  background-color: #003c43;
+  background-color: #fff;
     -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -33,8 +33,11 @@ body {
   margin-top: 80px;
 }
 .active{
-  color: #a8cd9f;
+  color: black;
   transform: scale(1.1);
+}
+.not-active{
+  color: #003c43;
 }
 .fade-in-section{
   opacity: 0;
@@ -51,7 +54,7 @@ body {
 .line {
   width: 7rem;
   height: 1px;
-  background-color: #fff;
+  background-color: #003c43;
 }
 .horizontal-line {
   width: 1px;
@@ -66,7 +69,7 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: #003c43;
+  background-color: #fff;
   z-index: 999999;
 }
 .link-to-section-container {
@@ -129,10 +132,10 @@ p {
   font-family: code;
 }
 span {
-  color: white;
+  color: black;
 }
 button {
-  color: #fff;
+  color: black;
   padding: 0 20px;
   border-radius: 20px;
   background-color: #135d66;
@@ -144,8 +147,8 @@ button:hover {
 }
 .main-page {
   width: 100%;
-  background-color: #003c43;
-  color: #fff;
+  background-color: #fff;
+  color:#003c43;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -153,8 +156,8 @@ button:hover {
 }
 .home {
   width: 80%;
-  background-color: #003c43;
-  color: #fff;
+  background-color: #fff;
+  color: #003c43;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -169,7 +172,7 @@ button:hover {
 }
 .gif-image {
   width: 20rem;
-  border-bottom: solid 3px #a8cd9f;
+  border-bottom: solid 3px #003c43;
 }
 .typist-container {
   display: inline-block;
@@ -220,7 +223,7 @@ button:hover {
   font-family: lora;
 }
 .quote-name {
-  color: #a8cd9f;
+  color: black;
 }
 .about-me-head {
   width: 20rem;
@@ -236,7 +239,7 @@ button:hover {
   width: 100%;
 }
 .full-bio b {
-  color: #a8cd9f;
+  color: black;
 }
 .stack-container {
   width: 100%;
@@ -280,7 +283,8 @@ button:hover {
 .project-card{
   width: 23rem;
   height: 24rem;
-  background-color: #135d66;
+  background-color: #77b0aa;
+  border: solid 1px #77b0aa;
   border-radius: 10px;
   margin: 1rem;
   display: flex;
@@ -312,7 +316,7 @@ button:hover {
 .git-link{
   width: 30px;
   height: 30px;
-  background-color: #135d66;
+  background-color: #77b0aa;
   position: absolute;
   border-radius: 10px;
   margin: 5px;
@@ -329,7 +333,7 @@ button:hover {
 .project-link{
   width: 30px;
   height: 30px;
-  background-color: #135d66;
+  background-color: #77b0aa;
   position: absolute;
   border-radius: 10px;
   margin: 5px 40px;

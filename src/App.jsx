@@ -200,7 +200,7 @@ function App() {
           <div className="dm-me">
             <a
               href="mailto:forevermarsh004@gmail.com"
-              style={{ textDecoration: "none", color: "#a8cd9f" }}
+              style={{ textDecoration: "none", color: "#003c43" }}
             >
               <Email2 />
               <p>say hello...</p>
@@ -303,7 +303,7 @@ function App() {
           <p className="full-bio">
             I write alot too, I have a blog. I write anything and everything i
             think of....{" "}
-            <a href="blog" style={{ color: "#a8cd9f", textDecoration: "none" }}>
+            <a href="blog" style={{ color: "black", textDecoration: "none" }}>
               my blog
             </a>
           </p>
