@@ -23,7 +23,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   scroll-behavior: smooth;
-  background-color: #fff;
+  background-color: #90d6ce;
     -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -69,7 +69,7 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: #fff;
+  background-color: #90d6ce;
   z-index: 999999;
 }
 .link-to-section-container {
@@ -147,7 +147,7 @@ button:hover {
 }
 .main-page {
   width: 100%;
-  background-color: #fff;
+  background-color: #90d6ce;
   color:#003c43;
   display: flex;
   flex-direction: column;
@@ -156,7 +156,7 @@ button:hover {
 }
 .home {
   width: 80%;
-  background-color: #fff;
+  background-color: #90d6ce;
   color: #003c43;
   display: flex;
   flex-direction: column;
@@ -201,7 +201,7 @@ button:hover {
   font-family: lora;
 }
 .quick-bio b {
-  color: #a8cd9f;
+  color: black;
 }
 .dm-me {
   display: flex;
