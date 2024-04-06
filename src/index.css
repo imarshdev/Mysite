@@ -24,6 +24,10 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   background-color: #003c43;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .sections{
   margin-top: 80px;
@@ -274,7 +278,7 @@ button:hover {
     justify-content: space-between;
 }
 .project-card{
-  width: 21rem;
+  width: 23rem;
   height: 24rem;
   background-color: #135d66;
   border-radius: 10px;
@@ -337,7 +341,6 @@ button:hover {
   width: 12rem;
   height: 3rem;
   align-self: flex-end;
-  background-color: #135d66;
   display: flex;
   justify-content: center;
   align-items: center;
