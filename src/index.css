@@ -300,6 +300,7 @@ button:hover {
   font-family: lora;
 }
 .project-gif{
+  width: 100%;
   height: 60%;
   border-radius: 10px 10px 0 0;
 }
