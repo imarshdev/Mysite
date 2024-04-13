@@ -48,7 +48,6 @@ export default function App() {
     <div
       style={{
         width: "100%",
-        height: "100dvh",
         padding: "0 10%",
       }}
     >
@@ -56,9 +55,6 @@ export default function App() {
       <div
         style={{
           width: "100%",
-          height: "100%",
-          overflowY: "scroll",
-          scrollbarWidth: "none",
         }}
       >
         <img
@@ -116,7 +112,7 @@ export default function App() {
         <div>
           <a
             href="mailto:forevermarsh004@gmail.com"
-            style={{ textDecoration: "none", color: "#a8cd9f" }}
+            style={{ textDecoration: "none", color: "#a8cd9f", alignSelf: 'center' }}
           >
             <Email2 />
             <p>say hello...</p>
@@ -175,7 +171,7 @@ export default function App() {
                 >
                   <button className="bidwar">
                     <p>Github - imarshdev/Bid-war</p>
-                    <img style={{ height: "7rem" }} src={bidding} alt="myGif" />
+                    <img style={{ height: "10rem" }} src={bidding} alt="myGif" />
                     <p
                       style={{
                         display: "flex",
@@ -197,7 +193,7 @@ export default function App() {
                 >
                   <button className="bidwar">
                     <p>Github - imarshdev/GreenThumb</p>
-                    <img style={{ height: "7rem" }} src={garden} alt="myGif" />
+                    <img style={{ height: "10rem" }} src={garden} alt="myGif" />
                     <p
                       style={{
                         display: "flex",
@@ -219,7 +215,7 @@ export default function App() {
                 >
                   <button className="bidwar">
                     <p>Github - imarshdev/SmartContract</p>
-                    <img style={{ height: "7rem" }} src={smart} alt="myGif" />
+                    <img style={{ height: "10rem" }} src={smart} alt="myGif" />
                     <p
                       style={{
                         display: "flex",

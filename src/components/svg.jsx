@@ -468,8 +468,8 @@ export function Email2() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1.5em"
-      height="1.5em"
+      width="3em"
+      height="3em"
       viewBox="0 0 24 24"
     >
       <path fill="currentcolor" fillOpacity={0} d="M12 11L4 6H20L12 11Z">
