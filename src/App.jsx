@@ -11,7 +11,7 @@ import {
   Letterboxd,
 } from "./components/svg";
 import FadeInView from "./components/fadein";
-import man from "./assets/man.gif";
+import man from "./assets/giphy2.gif";
 import garden from "./assets/garden.gif";
 import smart from "./assets/smart.gif";
 import bidding from "./assets/bidding.gif";
@@ -171,7 +171,7 @@ export default function App() {
                 >
                   <button className="bidwar">
                     <p>Github - imarshdev/Bid-war</p>
-                    <img style={{ height: "10rem" }} src={bidding} alt="myGif" />
+                    <img style={{ height: "13rem" }} src={bidding} alt="myGif" />
                     <p
                       style={{
                         display: "flex",
@@ -193,7 +193,7 @@ export default function App() {
                 >
                   <button className="bidwar">
                     <p>Github - imarshdev/GreenThumb</p>
-                    <img style={{ height: "10rem" }} src={garden} alt="myGif" />
+                    <img style={{ height: "13rem" }} src={garden} alt="myGif" />
                     <p
                       style={{
                         display: "flex",
@@ -215,7 +215,7 @@ export default function App() {
                 >
                   <button className="bidwar">
                     <p>Github - imarshdev/SmartContract</p>
-                    <img style={{ height: "10rem" }} src={smart} alt="myGif" />
+                    <img style={{ height: "13rem" }} src={smart} alt="myGif" />
                     <p
                       style={{
                         display: "flex",

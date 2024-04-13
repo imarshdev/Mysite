@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: #e5f6df;
   scroll-behavior: smooth;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -58,13 +59,13 @@ span {
   visibility: visible;
 }
 button {
-  background-color: #fff;
+  background-color: #ffffff00;
   border-radius: 5px;
-  border: solid 0.1px #9999993b;
+  border: solid 0.1px #a8cd9f;
   padding: 10px;
 }
 button:hover {
-  background-color: #efefef;
+  background-color: #a8cd9f;
 }
 .projects-container {
   display: flex;
@@ -74,8 +75,8 @@ button:hover {
 .topbar {
   width: calc(100% + 10%);
   margin-left: -10%;
-  height: 4rem;
-  background-color: #cccccc36;
+  height: 3rem;
+  background-color: #a8cd9f;
   position: fixed;
   z-index: 999;
 }
@@ -102,15 +103,13 @@ button:hover {
   width: 20rem;
 }
 @media screen and (max-width: 600px) {
-  .bidwar{
+  .bidwar {
     width: 100%;
     margin-bottom: 5px;
   }
   .stack-name {
     width: 100%;
-    margin-bottom: 5px;
-    border: solid 0;
-    border-bottom: solid 0.1px #9999993b;
+    margin-bottom: 20px;
   }
   .stack-container {
     display: initial;
@@ -120,5 +119,8 @@ button:hover {
   }
   .projects-container button {
     margin-bottom: 20px;
+  }
+  button:hover {
+    background-color: #fff;
   }
 }
