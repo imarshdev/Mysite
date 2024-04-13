@@ -1,22 +1,24 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
 const FadeInView = (props) => {
-  const [isVisible, setVisible] = useState(false);
-  const domRef = useRef();
-
-  useEffect(() => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const domRef = React.useRef();
+  React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(entry.isIntersecting);
+        }
+      });
     });
-    const currentRef = domRef.current;
-    observer.observe(currentRef);
-    return () => observer.unobserve(currentRef);
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
   }, []);
   return (
     <div
       className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      style={{ transitionDelay: `${props.delay}` }}
       ref={domRef}
-      style={{ transitionDelay: `${props.delay || 0}s` }}
     >
       {props.children}
     </div>
