@@ -63,6 +63,7 @@ button {
   border-radius: 5px;
   border: solid 0.1px #a8cd9f;
   padding: 10px;
+  box-shadow: 1px 1px 1px;
 }
 button:hover {
   background-color: #a8cd9f;
@@ -90,6 +91,11 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
+.resume{
+  font-family: lora;
+  display: flex;
+  align-items: center;
+}
 
 .stack-container {
   display: flex;
@@ -109,13 +115,14 @@ button:hover {
   justify-content: space-between;
   font-family: lora;
   font-size: 14px;
-  margin: 5px;
+  margin-bottom: 10px;
 }
 .project-name {
   margin: 1rem;
 }
 .bidwar {
   width: 20rem;
+  box-shadow: 5px 5px 5px;
 }
 @media screen and (max-width: 600px) {
   .bidwar {
@@ -141,8 +148,5 @@ button:hover {
   }
   .project-item {
     width: 100%;
-  }
-  button:hover {
-    background-color: #fff;
   }
 }

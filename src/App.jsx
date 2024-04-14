@@ -12,6 +12,7 @@ import {
   Instagram,
   TwitterX,
   Linkedin,
+  File,
 } from "./components/svg";
 import FadeInView from "./components/fadein";
 import man from "./assets/giphy.gif";
@@ -71,7 +72,10 @@ export default function App() {
           }}
         >
           <p>@ChelangatMarshMansur</p>
-          <Github />
+          <div className="resume">
+            resume
+            <File />
+          </div>
         </div>
       </div>
       <div
@@ -80,11 +84,7 @@ export default function App() {
           padding: "0 10%",
         }}
       >
-        <img
-          className="image"
-          src={man}
-          alt="myGif"
-        />
+        <img className="image" src={man} alt="myGif" />
         <br />
         <div className="typist-container">
           <h1 className="typist-text">
@@ -117,7 +117,7 @@ export default function App() {
               and, or company.
             </p>
           </FadeInView>
-          <FadeInView delay={`1.5s`}>
+          <FadeInView delay={`1s`}>
             <div
               style={{
                 textAlign: "end",
@@ -210,9 +210,9 @@ export default function App() {
               </div>
               <div className="project-item">
                 <li className="project-name">
-                  A smart garden system to monitor soil moisture, light levels,
-                  temperature and more to maintain plants. built using Raspberry
-                  Pi, Google cloud IoT and Java.
+                  A smart garden system to monitor soil moisture, light levels
+                  and temperature. Using Raspberry Pi, Google cloud IoT and
+                  Java.
                 </li>
                 <FadeInView>
                   <a
