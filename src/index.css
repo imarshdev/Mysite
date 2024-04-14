@@ -70,7 +70,7 @@ button:hover {
 }
 .image {
   height: 20rem;
-  margin-top: 4rem;
+  margin-top: 5rem;
   border-radius: 10px;
 }
 .projects-container {
@@ -122,7 +122,6 @@ button:hover {
 }
 .bidwar {
   width: 20rem;
-  box-shadow: 5px 5px 5px;
 }
 @media screen and (max-width: 600px) {
   .bidwar {

@@ -50,11 +50,12 @@ export default function App() {
     },
   ];
   const links = [
-    { description: "my spotify", icon: Spotify },
-    { description: "my letterboxed", icon: Letterboxd },
-    { description: "follow my X", icon: TwitterX },
-    { description: "my Instagram", icon: Instagram },
     { description: "my Github", icon: Github },
+    { description: "my Linkedin", icon: Linkedin },
+    { description: "follow my X", icon: TwitterX },
+    { description: "my letterboxed", icon: Letterboxd },
+    { description: "my Instagram", icon: Instagram },
+    { description: "my spotify", icon: Spotify },
   ];
   return (
     <div
@@ -84,16 +85,20 @@ export default function App() {
           padding: "0 10%",
         }}
       >
-        <img className="image" src={man} alt="myGif" />
-        <br />
-        <div className="typist-container">
-          <h1 className="typist-text">
-            Hey! I'm <span>Marsh...</span>🍃
-          </h1>
+        <div style={{ textAlign: "center" }}>
+          <FadeInView>
+            <img className="image" src={man} alt="myGif" />
+          </FadeInView>
+          <br />
+          <div className="typist-container">
+            <h1 className="typist-text">
+              Hey! I'm <span>Marsh...</span>🍃
+            </h1>
+          </div>
         </div>
         <div>
           <FadeInView>
-            <p>
+            <p style={{ textAlign: "center" }}>
               I'm <span>Chelangat Marsh Mansur</span>, a 21 year old a
               full-stack developer. I create dynamic and user-friendly software.
               I love tackling complex problems and turning them into sleek,
@@ -103,13 +108,13 @@ export default function App() {
             </p>
           </FadeInView>
           <FadeInView delay={`0.5s`}>
-            <p>
+            <p style={{ textAlign: "center" }}>
               In progress: Bachelor's Degree of Science in Software Engineering
               (Graduating: October, 2025). <br />
             </p>
           </FadeInView>
           <FadeInView delay={`1s`}>
-            <p>
+            <p style={{ textAlign: "center" }}>
               I've had experience in collaborating with diverse teams and
               fostering open communication and public speaking engagements. What
               I'm looking for is to obtain a challenging position where I can
@@ -117,7 +122,7 @@ export default function App() {
               and, or company.
             </p>
           </FadeInView>
-          <FadeInView delay={`1s`}>
+          <FadeInView delay={`0.5s`}>
             <div
               style={{
                 textAlign: "end",
