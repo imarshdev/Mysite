@@ -9,9 +9,13 @@ import {
   Github,
   Spotify,
   Letterboxd,
+  Instagram,
+  TwitterX,
+  Linkedin,
 } from "./components/svg";
 import FadeInView from "./components/fadein";
-import man from "./assets/giphy2.gif";
+import man from "./assets/giphy.gif";
+import stewie from "./assets/feyd.png"
 import garden from "./assets/garden.gif";
 import smart from "./assets/smart.gif";
 import bidding from "./assets/bidding.gif";
@@ -44,21 +48,40 @@ export default function App() {
       icon: CPlusPlus,
     },
   ];
+  const links = [
+    { description: "my spotify", icon: Spotify },
+    { description: "my letterboxed", icon: Letterboxd },
+    { description: "follow my X", icon: TwitterX },
+    { description: "my Instagram", icon: Instagram },
+    { description: 'my Github', icon: Github}
+  ];
   return (
     <div
       style={{
         width: "100%",
-        padding: "0 10%",
       }}
     >
-      <div className="topbar"></div>
+      <div className="topbar">
+        <div
+          style={{
+            width: "80%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <p>@ChelangatMarshMansur</p>
+          <Github />
+        </div>
+      </div>
       <div
         style={{
-          width: "100%",
+          width: "80%",
+          padding: "0 10%",
         }}
       >
         <img
-          style={{ width: "15rem", marginTop: "4rem" }}
+          style={{ height: "20rem", marginTop: "4rem", borderRadius: "10px" }}
           src={man}
           alt="myGif"
         />
@@ -112,7 +135,11 @@ export default function App() {
         <div>
           <a
             href="mailto:forevermarsh004@gmail.com"
-            style={{ textDecoration: "none", color: "#a8cd9f", alignSelf: 'center' }}
+            style={{
+              textDecoration: "none",
+              color: "#a8cd9f",
+              alignSelf: "center",
+            }}
           >
             <Email2 />
             <p>say hello...</p>
@@ -134,10 +161,7 @@ export default function App() {
               {stack.map((item, i) => {
                 return (
                   <FadeInView delay={`${i + 1}00ms`}>
-                    <button className="stack-name">
-                      <item.icon />
-                      <p>{item.name}</p>
-                    </button>
+                    <li className="stack-name">{item.name}</li>
                   </FadeInView>
                 );
               })}
@@ -146,16 +170,16 @@ export default function App() {
           <div style={{ width: "100%" }}>
             <p>
               <b>Currently building </b>
-              <li>
+              <li className="project-name">
                 A real-time bidding system for online auctions. Using Reactfor
                 front End, Flask for the backend and MongoDb
               </li>
-              <li>
+              <li className="project-name">
                 A smart garden system to monitor soil moisture, light levels,
                 temperature and more to maintain plants. built using Raspberry
                 Pi, Google cloud IoT and Java.
               </li>
-              <li>
+              <li className="project-name">
                 A blockchain smart contract for Ethereum built using solidity
                 and Truffle to compile, deploy and interract with
               </li>
@@ -171,7 +195,11 @@ export default function App() {
                 >
                   <button className="bidwar">
                     <p>Github - imarshdev/Bid-war</p>
-                    <img style={{ height: "13rem" }} src={bidding} alt="myGif" />
+                    <img
+                      style={{ height: "13rem" }}
+                      src={bidding}
+                      alt="myGif"
+                    />
                     <p
                       style={{
                         display: "flex",
@@ -181,7 +209,7 @@ export default function App() {
                       }}
                     >
                       <Github />
-                      https://github.com/imarshdev/Bid-war.git
+                      https://github.com/imarshdev/Bid-wa...
                     </p>
                   </button>
                 </a>
@@ -203,7 +231,7 @@ export default function App() {
                       }}
                     >
                       <Github />
-                      https://github.com/imarshdev/GreenThumb.git
+                      https://github.com/imarshdev/GreenT...
                     </p>
                   </button>
                 </a>
@@ -225,7 +253,7 @@ export default function App() {
                       }}
                     >
                       <Github />
-                      https://github.com/imarshdev/SmartContract.git
+                      https://github.com/imarshdev/SmartC...
                     </p>
                   </button>
                 </a>
@@ -250,16 +278,17 @@ export default function App() {
             <i>favourite artist,</i> I think <span>Ruth B</span>
           </p>
         </FadeInView>
-        <FadeInView delay={`1s`}>
-          <button className="stack-name">
-            Check out my spotify <Spotify />
-          </button>
-        </FadeInView>
-        <FadeInView delay={`1.5s`}>
-          <button className="stack-name">
-            Check out my Letterboxd <Letterboxd />
-          </button>
-        </FadeInView>
+        <div>
+          {links.map((link, i) => {
+            return (
+              <FadeInView delay={`${i + 1}00ms`}>
+                <button className="stack-name2">
+                  {link.description} <link.icon />
+                </button>
+              </FadeInView>
+            );
+          })}
+        </div>
         <div style={{ height: "2rem" }}></div>
         <div>
           <p>
