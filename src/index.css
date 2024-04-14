@@ -67,10 +67,18 @@ button {
 button:hover {
   background-color: #a8cd9f;
 }
+.image {
+  height: 20rem;
+  margin-top: 4rem;
+  border-radius: 10px;
+}
 .projects-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.project-item {
+  width: 30%;
 }
 .topbar {
   width: 100%;
@@ -92,19 +100,19 @@ button:hover {
 .stack-name {
   font-family: lora;
   font-size: 14px;
-    margin: 5px;
+  margin: 5px;
 }
-.stack-name2{
-    width: 20rem;
+.stack-name2 {
+  width: 20rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-    font-family: lora;
+  font-family: lora;
   font-size: 14px;
-    margin: 5px;
+  margin: 5px;
 }
-.project-name{
-    margin: 5px;
+.project-name {
+  margin: 1rem;
 }
 .bidwar {
   width: 20rem;
@@ -113,6 +121,10 @@ button:hover {
   .bidwar {
     width: 100%;
     margin-bottom: 5px;
+  }
+  .image{
+    height: 10rem;
+    margin-top: 10rem;
   }
   .stack-name {
     width: 100%;
@@ -126,6 +138,9 @@ button:hover {
   }
   .projects-container button {
     margin-bottom: 20px;
+  }
+  .project-item {
+    width: 100%;
   }
   button:hover {
     background-color: #fff;

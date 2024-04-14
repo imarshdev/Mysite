@@ -15,7 +15,7 @@ import {
 } from "./components/svg";
 import FadeInView from "./components/fadein";
 import man from "./assets/giphy.gif";
-import stewie from "./assets/feyd.png"
+import stewie from "./assets/feyd.png";
 import garden from "./assets/garden.gif";
 import smart from "./assets/smart.gif";
 import bidding from "./assets/bidding.gif";
@@ -53,7 +53,7 @@ export default function App() {
     { description: "my letterboxed", icon: Letterboxd },
     { description: "follow my X", icon: TwitterX },
     { description: "my Instagram", icon: Instagram },
-    { description: 'my Github', icon: Github}
+    { description: "my Github", icon: Github },
   ];
   return (
     <div
@@ -81,7 +81,7 @@ export default function App() {
         }}
       >
         <img
-          style={{ height: "20rem", marginTop: "4rem", borderRadius: "10px" }}
+          className="image"
           src={man}
           alt="myGif"
         />
@@ -114,7 +114,7 @@ export default function App() {
               fostering open communication and public speaking engagements. What
               I'm looking for is to obtain a challenging position where I can
               utilize my skills and contribute to the overral success of my team
-              or company.
+              and, or company.
             </p>
           </FadeInView>
           <FadeInView delay={`1.5s`}>
@@ -145,6 +145,7 @@ export default function App() {
             <p>say hello...</p>
           </a>
         </div>
+        <div style={{ height: "3rem" }}></div>
         <div
           style={{
             display: "flex",
@@ -170,94 +171,108 @@ export default function App() {
           <div style={{ width: "100%" }}>
             <p>
               <b>Currently building </b>
-              <li className="project-name">
-                A real-time bidding system for online auctions. Using Reactfor
-                front End, Flask for the backend and MongoDb
-              </li>
-              <li className="project-name">
-                A smart garden system to monitor soil moisture, light levels,
-                temperature and more to maintain plants. built using Raspberry
-                Pi, Google cloud IoT and Java.
-              </li>
-              <li className="project-name">
-                A blockchain smart contract for Ethereum built using solidity
-                and Truffle to compile, deploy and interract with
-              </li>
             </p>
             <div className="projects-container">
-              <FadeInView>
-                <a
-                  style={{
-                    textDecoration: "none",
-                    color: "#a8cd9f",
-                  }}
-                  href="https://github.com/imarshdev/Bid-war.git"
-                >
-                  <button className="bidwar">
-                    <p>Github - imarshdev/Bid-war</p>
-                    <img
-                      style={{ height: "13rem" }}
-                      src={bidding}
-                      alt="myGif"
-                    />
-                    <p
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-around",
-                        color: "#a8cd9f",
-                      }}
-                    >
-                      <Github />
-                      https://github.com/imarshdev/Bid-wa...
-                    </p>
-                  </button>
-                </a>
-              </FadeInView>
-              <FadeInView>
-                <a
-                  style={{ textDecoration: "none", color: "#a8cd9f" }}
-                  href="https://github.com/imarshdev/Bid-war.git"
-                >
-                  <button className="bidwar">
-                    <p>Github - imarshdev/GreenThumb</p>
-                    <img style={{ height: "13rem" }} src={garden} alt="myGif" />
-                    <p
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-around",
-                        color: "#a8cd9f",
-                      }}
-                    >
-                      <Github />
-                      https://github.com/imarshdev/GreenT...
-                    </p>
-                  </button>
-                </a>
-              </FadeInView>
-              <FadeInView>
-                <a
-                  style={{ textDecoration: "none", color: "#a8cd9f" }}
-                  href="https://github.com/imarshdev/Bid-war.git"
-                >
-                  <button className="bidwar">
-                    <p>Github - imarshdev/SmartContract</p>
-                    <img style={{ height: "13rem" }} src={smart} alt="myGif" />
-                    <p
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-around",
-                        color: "#a8cd9f",
-                      }}
-                    >
-                      <Github />
-                      https://github.com/imarshdev/SmartC...
-                    </p>
-                  </button>
-                </a>
-              </FadeInView>
+              <div className="project-item">
+                <li className="project-name">
+                  A real-time bidding system for online auctions. Using React
+                  for front End, Flask for the backend and MongoDb
+                </li>
+                <FadeInView>
+                  <a
+                    style={{
+                      textDecoration: "none",
+                      color: "#a8cd9f",
+                    }}
+                    href="https://github.com/imarshdev/Bid-war.git"
+                  >
+                    <button className="bidwar">
+                      <p>Github - imarshdev/Bid-war</p>
+                      <img
+                        style={{ height: "13rem" }}
+                        src={bidding}
+                        alt="myGif"
+                      />
+                      <p
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-around",
+                          color: "#a8cd9f",
+                        }}
+                      >
+                        <Github />
+                        https://github.com/imarshdev/Bid-wa...
+                      </p>
+                    </button>
+                  </a>
+                </FadeInView>
+              </div>
+              <div className="project-item">
+                <li className="project-name">
+                  A smart garden system to monitor soil moisture, light levels,
+                  temperature and more to maintain plants. built using Raspberry
+                  Pi, Google cloud IoT and Java.
+                </li>
+                <FadeInView>
+                  <a
+                    style={{ textDecoration: "none", color: "#a8cd9f" }}
+                    href="https://github.com/imarshdev/Bid-war.git"
+                  >
+                    <button className="bidwar">
+                      <p>Github - imarshdev/GreenThumb</p>
+                      <img
+                        style={{ height: "13rem" }}
+                        src={garden}
+                        alt="myGif"
+                      />
+                      <p
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-around",
+                          color: "#a8cd9f",
+                        }}
+                      >
+                        <Github />
+                        https://github.com/imarshdev/GreenT...
+                      </p>
+                    </button>
+                  </a>
+                </FadeInView>
+              </div>
+              <div className="project-item">
+                <li className="project-name">
+                  A blockchain smart contract for Ethereum built using solidity
+                  and Truffle to compile, deploy and interract with
+                </li>
+                <FadeInView>
+                  <a
+                    style={{ textDecoration: "none", color: "#a8cd9f" }}
+                    href="https://github.com/imarshdev/Bid-war.git"
+                  >
+                    <button className="bidwar">
+                      <p>Github - imarshdev/SmartContract</p>
+                      <img
+                        style={{ height: "13rem" }}
+                        src={smart}
+                        alt="myGif"
+                      />
+                      <p
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-around",
+                          color: "#a8cd9f",
+                        }}
+                      >
+                        <Github />
+                        https://github.com/imarshdev/SmartC...
+                      </p>
+                    </button>
+                  </a>
+                </FadeInView>
+              </div>
             </div>
           </div>
         </div>
