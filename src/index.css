@@ -2,15 +2,11 @@
   font-family: lora;
   src: url(/src/assets/JosefinSans-Regular.ttf);
 }
-@font-face {
-  font-family: code;
-  src: url(/src/assets/chintzy.ttf);
-}
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #e5f6df;
+  background-color: #fff;
   scroll-behavior: smooth;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -25,38 +21,12 @@ li {
 span {
   color: #a8cd9f;
 }
-.typist-container {
-  display: inline-block;
-}
-.typist-text {
-  border-right: 5px solid;
+.container {
   width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 2s, cursor 0.4s step-end infinite alternate;
-  animation-delay: 1s;
 }
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(10vh);
-  visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 1s ease-out;
-  will-change: opacity, visibility;
-}
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
+.content {
+  width: 80%;
+  padding: 0 10%;
 }
 button {
   background-color: #c7f3bc8c;
@@ -67,85 +37,4 @@ button {
 }
 button:hover {
   background-color: #a8cd9f;
-}
-.image {
-  height: 20rem;
-  margin-top: 5rem;
-  border-radius: 10px;
-}
-.projects-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.project-item {
-  width: 30%;
-}
-.topbar {
-  width: 100%;
-  height: 3rem;
-  background-color: #a8cd9f;
-  position: fixed;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.resume{
-  font-family: lora;
-  display: flex;
-  align-items: center;
-}
-
-.stack-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.stack-name {
-  font-family: lora;
-  font-size: 14px;
-  margin: 5px;
-}
-.stack-name2 {
-  width: 20rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: lora;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-.project-name {
-  margin: 1rem;
-}
-.bidwar {
-  width: 20rem;
-}
-@media screen and (max-width: 600px) {
-  .bidwar {
-    width: 100%;
-    margin-bottom: 5px;
-  }
-  .image{
-    height: 10rem;
-    margin-top: 10rem;
-  }
-  .stack-name {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .stack-container {
-    display: initial;
-  }
-  .projects-container {
-    display: initial;
-  }
-  .projects-container button {
-    margin-bottom: 20px;
-  }
-  .project-item {
-    width: 100%;
-  }
 }

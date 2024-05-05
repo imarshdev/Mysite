@@ -1,5 +1,12 @@
 import React from "react";
+import "./fadein.css"
 
+export function Space() {
+  return <div className="space"></div>
+}
+export function Space2() {
+  return <div className="space2"></div>
+}
 const FadeInView = (props) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const domRef = React.useRef();

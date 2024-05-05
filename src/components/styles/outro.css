@@ -1,0 +1,9 @@
+.stack-name2 {
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: lora;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
