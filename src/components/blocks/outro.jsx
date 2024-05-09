@@ -4,21 +4,19 @@ import FadeInView, { Space, Space2 } from "../fadein";
 import {
   Github,
   Spotify,
-  Letterboxd,
-  Instagram,
-  TwitterX,
   Linkedin,
+  File,
+  Email
 } from "../../assets/svg";
 
 class Outro extends React.Component {
   render() {
     const links = [
+    { description: 'email me', icon: Email},
       { description: "my Github", icon: Github },
       { description: "my Linkedin", icon: Linkedin },
-      { description: "follow my X", icon: TwitterX },
-      { description: "my letterboxed", icon: Letterboxd },
-      { description: "my Instagram", icon: Instagram },
       { description: "my spotify", icon: Spotify },
+      { description: "my resume", icon: File },
     ];
     const one = (
       <FadeInView>
@@ -38,11 +36,17 @@ class Outro extends React.Component {
         </p>
       </FadeInView>
     );
+    const three = (
+      <FadeInView delay={`1s`}>
+        <p>Here's a few ways you can get in touch with me...</p>
+      </FadeInView>
+    );
     return (
         <>
             <Space/>
         {[one]}
         {[two]}
+        {[three]}
         <div>
           {links.map((link, i) => {
             return (

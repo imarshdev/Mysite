@@ -532,7 +532,7 @@ export function Email() {
           values="0;0.3"
         ></animate>
       </path>
-      <g fill="none" stroke="#fff" strokeLinecap="round" strokeWidth={2}>
+      <g fill="none" stroke="black" strokeLinecap="round" strokeWidth={2}>
         <rect
           width={18}
           height={14}

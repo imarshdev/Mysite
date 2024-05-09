@@ -42,7 +42,6 @@ class StackAndProjects extends React.Component {
 
     return (
       <>
-        {" "}
         <div className="stack-projects-container">
           <div>
             {[stacktitle]}

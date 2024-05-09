@@ -7,7 +7,7 @@ export function TopBar() {
   return (
     <div className="topbar">
       <div className="topbar-container">
-        <p>@ChelangatMarshMansur</p>
+        <p>@iMarshDev</p>
         <div className="resume">
           resume
           <File />
@@ -19,12 +19,17 @@ export function TopBar() {
 
 class Intro extends React.Component {
   render() {
+    const details = (
+      <p>
+        <span>Chelangat Marsh Mansur</span>,<br />
+        <p>21 year old full-stack software engineer.</p>
+      </p>
+    );
     const one = (
       <p className="about-me">
-        I'm <span>Chelangat Marsh Mansur</span>, a 21 year old a full-stack
-        developer. I create dynamic and user-friendly software. I love tackling
-        complex problems and turning them into sleek, effecient applications. I
-        have a proven track record of delivering robust code for high-volume
+        I create dynamic and user-friendly software. I love tackling complex
+        problems and turning them into sleek, effecient applications. I have a
+        proven track record of delivering robust code for high-volume
         businesses. Eager to bring top-notch applications to life.
       </p>
     );
@@ -48,12 +53,13 @@ class Intro extends React.Component {
         <div className="name-intro">
           <div className="typist-container">
             <h1 className="typist-text">
-              Hey! I'm <span>Marsh...</span>🍃
+              Hey! I'm <span>Marsh...</span>^_~
             </h1>
           </div>
         </div>
         <div>
-          <FadeInView>{[one]}</FadeInView>
+          <FadeInView>{[details]}</FadeInView>
+          <FadeInView delay={`0.2s`}>{[one]}</FadeInView>
           <FadeInView delay={`0.5s`}>{[two]}</FadeInView>
           <FadeInView delay={`1s`}>{[three]}</FadeInView>
           <FadeInView delay={`0.5s`}>

@@ -34,7 +34,9 @@
   justify-content: space-around;
   color: #a8cd9f;
 }
-
+.bidwar{
+  width: 100%;
+}
 @media screen and (max-width: 600px) {
   .stack-name {
     width: 100%;
