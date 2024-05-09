@@ -481,7 +481,12 @@ export function Email2() {
           values="0;0.3"
         ></animate>
       </path>
-      <g fill="none" stroke="currentcolor" strokeLinecap="round" strokeWidth={2}>
+      <g
+        fill="none"
+        stroke="currentcolor"
+        strokeLinecap="round"
+        strokeWidth={2}
+      >
         <rect
           width={18}
           height={14}
@@ -826,8 +831,6 @@ export function Bullet() {
     </svg>
   );
 }
-
-
 
 export function Link() {
   return (

@@ -1,18 +1,12 @@
 import React from "react";
 import "../styles/outro.css";
 import FadeInView, { Space, Space2 } from "../fadein";
-import {
-  Github,
-  Spotify,
-  Linkedin,
-  File,
-  Email
-} from "../../assets/svg";
+import { Github, Spotify, Linkedin, File, Email } from "../../assets/svg";
 
 class Outro extends React.Component {
   render() {
     const links = [
-    { description: 'email me', icon: Email},
+      { description: "email me", icon: Email },
       { description: "my Github", icon: Github },
       { description: "my Linkedin", icon: Linkedin },
       { description: "my spotify", icon: Spotify },
@@ -42,8 +36,8 @@ class Outro extends React.Component {
       </FadeInView>
     );
     return (
-        <>
-            <Space/>
+      <>
+        <Space />
         {[one]}
         {[two]}
         {[three]}
@@ -57,8 +51,8 @@ class Outro extends React.Component {
               </FadeInView>
             );
           })}
-            </div>
-            <Space />
+        </div>
+        <Space />
         <div>
           <p>
             Built and designed by Marsh <br />
@@ -66,8 +60,8 @@ class Outro extends React.Component {
           </p>
           <br />
           <p>Hi @gazijarin</p>
-            </div>
-            <Space2 />
+        </div>
+        <Space2 />
       </>
     );
   }
