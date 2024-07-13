@@ -21,7 +21,7 @@
 }
 
 .name-intro {
-  text-align: center;
+  text-align: start;
   margin-top: 5rem;
 }
 /* typing animation */
@@ -60,4 +60,9 @@
   text-decoration: none;
   color: #a8cd9f;
   align-self: center;
+}
+@media screen and (min-width: 600px) {
+  .about-me{
+    width: 70%;
+  }
 }

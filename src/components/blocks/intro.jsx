@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/intro.css";
 import FadeInView, { Space } from "../fadein";
 import { Email2, File } from "../../assets/svg";
+import me2 from "../../assets/me2.jpg"
 
 export function TopBar() {
   return (
@@ -29,19 +30,13 @@ class Intro extends React.Component {
       <p className="about-me">
         I create dynamic and user-friendly software. I love tackling complex
         problems and turning them into sleek, effecient applications. I have a
-        proven track record of delivering robust code for high-volume
+        track record of delivering robust code for high-volume
         businesses. Eager to bring top-notch applications to life.
-      </p>
-    );
-    const two = (
-      <p className="about-me">
-        In progress: Bachelor's Degree of Science in Software Engineering
-        (Graduating: October, 2025). <br />
       </p>
     );
     const three = (
       <p className="about-me">
-        I've had experience in collaborating with diverse teams and fostering
+        I've had a fair share of experience in collaborating with diverse teams and fostering
         open communication and public speaking engagements. What I'm looking for
         is to obtain a challenging position where I can utilize my skills and
         contribute to the overral success of my team and, or company.
@@ -51,17 +46,12 @@ class Intro extends React.Component {
     return (
       <>
         <div className="name-intro">
-          <div className="typist-container">
-            <h1 className="typist-text">
-              Hey! I'm <span>Marsh...</span>^_~
-            </h1>
-          </div>
+          <img className="project-img" src={me2} />
         </div>
         <div>
           <FadeInView>{[details]}</FadeInView>
           <FadeInView delay={`0.2s`}>{[one]}</FadeInView>
-          <FadeInView delay={`0.5s`}>{[two]}</FadeInView>
-          <FadeInView delay={`1s`}>{[three]}</FadeInView>
+          <FadeInView delay={`0.5s`}>{[three]}</FadeInView>
           <FadeInView delay={`0.5s`}>
             <div className="quote-container">
               <p>The World is But a Canvas to our Imagination.</p>

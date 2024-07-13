@@ -76,6 +76,27 @@ class StackAndProjects extends React.Component {
                   </a>
                 </FadeInView>
               </div>
+            </div>
+            <br /><br />
+            <p>
+              <b>Other projects </b>
+            </p>
+            <div className="projects-container">
+              <div className="project-item">
+                {[one]}
+                <FadeInView>
+                  <a href="https://github.com/imarshdev/Bid-war.git">
+                    <button className="bidwar">
+                      <p>Github - imarshdev/Bid-war</p>
+                      <img className="project-img" src={bidding} />
+                      <p className="project-link">
+                        <Github />
+                        https://github.com/imarshdev/Bid-wa...
+                      </p>
+                    </button>
+                  </a>
+                </FadeInView>
+              </div>
               <div className="project-item">
                 {[two]}
                 <FadeInView>

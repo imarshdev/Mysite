@@ -17,21 +17,13 @@ class Outro extends React.Component {
         <p>
           When I'm not coding, 'which is not often', I like to read books📖 and
           workout💪... Weekends are movie-time🍿 so I go to the movies with
-          friends and sometimes, most times alone.
+          friends and sometimes, most times alone. <br />
+          Plus i love music.... who doesn't???
         </p>
       </FadeInView>
     );
     const two = (
       <FadeInView delay={`0.5s`}>
-        <p>
-          🎧I genuinely can't say what my favourite song is, I have one or two
-          for every specific mood of the time, But when i think{" "}
-          <i>favourite artist,</i> I think <span>Ruth B</span>
-        </p>
-      </FadeInView>
-    );
-    const three = (
-      <FadeInView delay={`1s`}>
         <p>Here's a few ways you can get in touch with me...</p>
       </FadeInView>
     );
@@ -40,7 +32,6 @@ class Outro extends React.Component {
         <Space />
         {[one]}
         {[two]}
-        {[three]}
         <div>
           {links.map((link, i) => {
             return (
