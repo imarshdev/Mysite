@@ -1,16 +1,31 @@
 import React from "react";
 import "../styles/outro.css";
 import FadeInView, { Space, Space2 } from "../fadein";
-import { Github, Spotify, Linkedin, File, Email } from "../../assets/svg";
+import { Github, Spotify, Linkedin, File, Email, Link } from "../../assets/svg";
 
 class Outro extends React.Component {
   render() {
     const links = [
-      { description: "email me", icon: Email },
-      { description: "my Github", icon: Github },
-      { description: "my Linkedin", icon: Linkedin },
-      { description: "my spotify", icon: Spotify },
-      { description: "my resume", icon: File },
+      {
+        description: "email me",
+        icon: Email,
+        link: "mailto:forevermarsh004@gmail.com",
+      },
+      {
+        description: "my Github",
+        icon: Github,
+        link: "https://github.com/imarshdev",
+      },
+      {
+        description: "my Linkedin",
+        icon: Linkedin,
+        link: "https://www.linkedin.com/in/marshmansur",
+      },
+      {
+        description: "my spotify",
+        icon: Spotify,
+        link: "https://open.spotify.com/user/sgw331agtxe12j35fd5jrjfwb?si=vEdJVhtNRVOocTS0IqGX7w",
+      },
     ];
     const one = (
       <FadeInView>
@@ -36,9 +51,11 @@ class Outro extends React.Component {
           {links.map((link, i) => {
             return (
               <FadeInView delay={`${i + 1}00ms`}>
-                <button className="stack-name2">
-                  {link.description} <link.icon />
-                </button>
+                <a href={link.link}>
+                  <button className="stack-name2">
+                    {link.description} <link.icon />
+                  </button>
+                </a>
               </FadeInView>
             );
           })}

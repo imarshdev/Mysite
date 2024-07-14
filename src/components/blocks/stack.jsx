@@ -16,7 +16,7 @@ class StackAndProjects extends React.Component {
     const one = (
       <li className="project-name">
         A real-time bidding system for online auctions. Using React for front
-        End, Flask for the backend and MongoDb
+        End, Node js for the backend and MongoDb
       </li>
     );
     const two = (
@@ -34,10 +34,10 @@ class StackAndProjects extends React.Component {
     const stack = [
       "Javascript Es6+",
       "React js",
-      "Java",
+      "C",
+      "C++",
       "Python",
       "Tailwind Css",
-      "C++",
     ];
 
     return (
