@@ -28,7 +28,7 @@ class StackAndProjects extends React.Component {
     const three = (
       <li className="project-name">
         A blockchain smart contract for Ethereum built using solidity and
-        Truffle to compile, deploy and interract with
+        Truffle to compile, deploy and interact with
       </li>
     );
     const stack = [
