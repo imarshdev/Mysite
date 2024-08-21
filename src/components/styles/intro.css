@@ -7,7 +7,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: solid 1px #a8cd9f;
 }
 .topbar-container {
   width: 80%;
