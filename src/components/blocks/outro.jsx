@@ -43,7 +43,7 @@ class Outro extends React.Component {
       </FadeInView>
     );
     return (
-      <>
+      <div className="outro">
         <Space />
         {[one]}
         {[two]}
@@ -70,7 +70,7 @@ class Outro extends React.Component {
           <p>Hi @gazijarin</p>
         </div>
         <Space2 />
-      </>
+      </div>
     );
   }
 }

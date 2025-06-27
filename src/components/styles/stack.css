@@ -1,3 +1,6 @@
+.stack{
+  padding: 0 10%;
+}
 .stack-projects-container {
   display: flex;
   justify-content: space-between;

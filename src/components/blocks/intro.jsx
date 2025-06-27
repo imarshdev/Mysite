@@ -5,19 +5,18 @@ import { Email2, File } from "../../assets/svg";
 import me2 from "../../assets/me2.jpg";
 import resume from "../../assets/resume.pdf";
 
-
 export function TopBar() {
   const openResume = () => {
-    window.open(resume, '_blank')
-  }
+    window.open(resume, "_blank");
+  };
   return (
     <div className="topbar">
       <div className="topbar-container">
         <p>@iMarshDev</p>
-          <div onClick={openResume} className="resume">
-            resume
-            <File />
-          </div>
+        <div onClick={openResume} className="resume">
+          resume
+          <File />
+        </div>
       </div>
     </div>
   );
@@ -28,7 +27,7 @@ class Intro extends React.Component {
     const details = (
       <p>
         <span>Chelangat Marsh Mansur</span>,<br />
-        <p>21 year old full-stack software engineer.</p>
+        <p>22 year old full-stack software engineer.</p>
       </p>
     );
     const one = (
@@ -52,12 +51,14 @@ class Intro extends React.Component {
     return (
       <>
         <div className="name-intro">
-          <img className="project-img" src={me2} />
+          <img className="portrait-img" src={me2} />
+          <div className="intro-text">
+            <FadeInView>{[details]}</FadeInView>
+            <FadeInView delay={`0.2s`}>{[one]}</FadeInView>
+            <FadeInView delay={`0.5s`}>{[three]}</FadeInView>
+          </div>
         </div>
-        <div>
-          <FadeInView>{[details]}</FadeInView>
-          <FadeInView delay={`0.2s`}>{[one]}</FadeInView>
-          <FadeInView delay={`0.5s`}>{[three]}</FadeInView>
+        <div className="quote1">
           <FadeInView delay={`0.5s`}>
             <div className="quote-container">
               <p>The World is But a Canvas to our Imagination.</p>
@@ -65,7 +66,7 @@ class Intro extends React.Component {
             </div>
           </FadeInView>
         </div>
-        <div>
+        <div className="quote">
           <a href="mailto:forevermarsh004@gmail.com" className="mailto">
             <Email2 />
             <p>say hello...</p>

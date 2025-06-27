@@ -8,12 +8,14 @@
   align-items: center;
   justify-content: center;
 }
+
 .topbar-container {
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .resume {
   font-family: lora;
   display: flex;
@@ -22,12 +24,33 @@
 
 .name-intro {
   text-align: start;
-  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #03346E;
+  color: #a8cd9f;
+  padding: 10%;
 }
+
+.portrait-img {
+  width: 15rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
 /* typing animation */
 .typist-container {
   display: inline-block;
 }
+
 .typist-text {
   border-right: 5px solid;
   width: 100%;
@@ -36,19 +59,23 @@
   animation: typing 2s, cursor 0.4s step-end infinite alternate;
   animation-delay: 1s;
 }
+
 @keyframes cursor {
   50% {
     border-color: transparent;
   }
 }
+
 @keyframes typing {
   from {
     width: 0;
   }
 }
+
 .about-me {
   text-align: start;
 }
+
 .quote-container {
   text-align: end;
   height: 10rem;
@@ -56,13 +83,42 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.quote {
+  padding: 0 10%;
+}
+
+.quote1 {
+  padding: 10%;
+  background-color: #03346E;
+  color: #FFF;
+}
+
 .mailto {
   text-decoration: none;
   color: #a8cd9f;
   align-self: center;
 }
+
 @media screen and (min-width: 600px) {
-  .about-me{
+  .about-me {
     width: 70%;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .name-intro {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portrait-img {
+    width: 15rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+
 }

@@ -41,7 +41,7 @@ class StackAndProjects extends React.Component {
     ];
 
     return (
-      <>
+      <div className="stack">
         <div className="stack-projects-container">
           <div>
             {[stacktitle]}
@@ -77,7 +77,8 @@ class StackAndProjects extends React.Component {
                 </FadeInView>
               </div>
             </div>
-            <br /><br />
+            <br />
+            <br />
             <p>
               <b>Other projects </b>
             </p>
@@ -132,7 +133,7 @@ class StackAndProjects extends React.Component {
         </div>
         <Space />
         <hr style={{ color: "#a8cd9f" }} />
-      </>
+      </div>
     );
   }
 }
