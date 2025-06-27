@@ -67,6 +67,10 @@ class Intro extends React.Component {
           </FadeInView>
         </div>
         <div className="quote">
+          <br />
+          <br />
+          <br />
+          <br />
           <a href="mailto:forevermarsh004@gmail.com" className="mailto">
             <Email2 />
             <p>say hello...</p>
